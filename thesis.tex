@@ -1,0 +1,114 @@
+\documentclass[11pt,a4paper,titlepage]{scrreprt}
+\usepackage[ngerman, english]{babel} %silbentrennung
+\usepackage[left=3cm, right=2.5cm, bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc} %unicode
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\citestyle{plain}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[format=plain,justification=centering]{caption}
+\usepackage{acronym}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{changepage}
+
+\sisetup{locale=DE, per-mode=fraction, parse-numbers=false, output-decimal-marker = {,}}
+
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
+\renewcommand{\bibsection}{}
+\newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{.}}}
+\usepackage[figurename=Abbildung]{caption}	
+
+\pagestyle{plain}
+
+\begin{document}
+\normalfont
+
+\renewcommand*{\maketitle}{
+	\begin{titlepage}
+		\newgeometry{left=2.5cm,right=2.5cm,top=3.0cm,bottom=3cm}
+		\begin{center}
+			\begin{figure}[h]
+				\begin{minipage}[hbt]{6cm}
+					\flushleft
+					\includegraphics[width=\textwidth]{assets/htw_hochschule.png}
+				\end{minipage}
+				\hfill
+			\end{figure}
+			\vfill
+			{\large \bfseries Development of a Chrome Extension for Personalized Filter Suggestions\par}
+			\vskip 1.5cm
+			{\large \bfseries Abschlussarbeit\par}
+			\vskip 0.5cm
+			{\large zur Erlangung des akademischen Grades\\ \bfseries Bachelor of Science}
+			\vskip 0.5cm
+			{\large an der}
+			\vskip 0.5cm
+			{\large Hochschule für Technik und Wirtschaft Berlin\\ Fachbereich 4: Informatik, Kommunikation und Wirthschaft\\ Studiengang Angewandte Informatik}
+			\vfill
+			\begin{flushleft}
+								
+				\begin{description}[style=multiline,leftmargin=3.5cm]
+					\item [Erstprüfer]	Prof. Dr. Elena Schüler
+					\item [Zweitprüfer]	Birol Aksu
+				\end{description}
+
+				\begin{description}[style=multiline,leftmargin=3.5cm,font=\normalfont]				
+					\item [Eingereicht von:]	Sunan Regi Maunakea
+					\item [Matrikelnummer:]		s0566144
+					\item [Abgabe:]				22. August 2022
+				\end{description}
+				
+			\end{flushleft}
+		\end{center}
+		\restoregeometry
+	\end{titlepage}
+}
+
+\maketitle
+
+
+\newpage
+\pagenumbering{Roman}
+
+\tableofcontents
+
+\newpage
+
+\setlength{\headheight}{14pt}
+\setlength{\footskip}{40pt}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{\rightmark} %Kopfzeile links
+\fancyhead[C]{} %zentrierte Kopfzeile
+\fancyhead[R]{22. August 2022} %Kopfzeile rechts
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+\fancyfoot[C]{\thepage} %Seitennummer
+%\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thefigure{\arabic{figure}}
+\renewcommand\thetable{\arabic{table}}
+
+\shorthandoff{"}
+
+\input{text/introduction}
+\input{text/problem-and-objectives}
+\input{text/bibliography}
+
+\shorthandon{"}
+
+\end{document}  
