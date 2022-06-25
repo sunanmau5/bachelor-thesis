@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  23 JUN 2022 16:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  25 JUN 2022 10:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -879,38 +879,39 @@ s/htw_hochschule.png>] (./thesis.toc)
 
 
 ] (./text/introduction.tex)
-(./text/problem-and-objectives.tex
+(./text/theoretical-basis.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \newpage
-             [1]) (./text/eidesstattliche-erklaerung.tex [2])
-(./text/bibliography.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--1
+             [1] [2]) (./text/methodology.tex [3])
+(./text/project-implementation.tex [4]) (./text/references.tex [5]
+(./thesis.bbl)) (./text/eidesstattliche-erklaerung.tex [6])
+Underfull \hbox (badness 10000) in paragraph at lines 6--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--1
+Underfull \hbox (badness 10000) in paragraph at lines 6--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--1
+Underfull \hbox (badness 10000) in paragraph at lines 6--114
 
  []
 
-[3] (./thesis.bbl)) [4] (./thesis.aux)
+[7] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21565 strings out of 478268
- 430530 string characters out of 5846347
- 826227 words of memory out of 5000000
- 39462 multiletter control sequences out of 15000+600000
- 502792 words of font info for 52 fonts, out of 8000000 for 9000
+ 21609 strings out of 478268
+ 431481 string characters out of 5846347
+ 829227 words of memory out of 5000000
+ 39489 multiletter control sequences out of 15000+600000
+ 505507 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,11n,106p,10653b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/
@@ -919,10 +920,10 @@ texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/20
 st/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
 pe1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /lm/lmssbx10.pfb>
-Output written on thesis.pdf (6 pages, 202845 bytes).
+Output written on thesis.pdf (9 pages, 207050 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
