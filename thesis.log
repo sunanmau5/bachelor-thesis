@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  25 JUN 2022 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  27 JUN 2022 00:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -878,14 +878,13 @@ s/htw_hochschule.png>] (./thesis.toc)
  [1
 
 
-] (./text/introduction.tex)
-(./text/theoretical-basis.tex
+] (./text/introduction.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \newpage
-             [1] [2]) (./text/methodology.tex [3])
+l.15 
+      [1]) (./text/theoretical-basis.tex [2]) (./text/methodology.tex [3])
 (./text/project-implementation.tex [4]) (./text/references.tex [5]
 (./thesis.bbl)) (./text/eidesstattliche-erklaerung.tex [6])
 Underfull \hbox (badness 10000) in paragraph at lines 6--114
@@ -920,7 +919,7 @@ texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/20
 st/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
 pe1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /lm/lmssbx10.pfb>
-Output written on thesis.pdf (9 pages, 207050 bytes).
+Output written on thesis.pdf (9 pages, 208264 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  117 compressed objects within 2 object streams
