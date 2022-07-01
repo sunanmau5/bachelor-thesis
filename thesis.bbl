@@ -17,6 +17,26 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global}
+  \entry{david2020building}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=DJ}{%
+         family={David},
+         familyi={D\bibinitperiod},
+         given={Johansson},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DJ1}
+    \strng{fullhash}{DJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Building maintainable web applications using React: An
+  evaluation of architectural patterns conducted on Canvas LMS}
+    \field{year}{2020}
+  \endentry
+
   \entry{gackenheimer2015introducing}{incollection}{}
     \name{author}{1}{}{%
       {{hash=GC}{%
@@ -39,6 +59,25 @@
     \field{pages}{87\bibrangedash 106}
     \field{title}{Introducing flux: An application architecture for react}
     \field{year}{2015}
+  \endentry
+
+  \entry{google2021what}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={Google},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{What are extensions?}
+    \verb{url}
+    \verb https://developer.chrome.com/docs/extensions/mv3/overview/
+    \endverb
   \endentry
 
   \entry{islam2017reactjs}{article}{}
@@ -95,6 +134,35 @@
     \field{volume}{79}
     \field{journaltitle}{Journal of personality and social psychology}
     \field{year}{2000}
+  \endentry
+
+  \entry{maratkar2021re}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MPS}{%
+         family={Maratkar},
+         familyi={M\bibinitperiod},
+         given={Pratik\bibnamedelima Sharad},
+         giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={Adkar},
+         familyi={A\bibinitperiod},
+         given={Pratibha},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MPSAP1}
+    \strng{fullhash}{MPSAP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{12}
+    \field{pages}{99\bibrangedash 102}
+    \field{title}{React JS - An Emerging Frontend JavaScript Library}
+    \field{volume}{4}
+    \field{journaltitle}{Iconic Research And Engineering Journal s}
+    \field{year}{2021}
   \endentry
 
   \entry{some2019empoweb}{inproceedings}{}

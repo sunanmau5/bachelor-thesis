@@ -13,9 +13,17 @@
 \contentsline {subsection}{\numberline {2.2.3}Content Scripts}{4}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Background page}{5}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}React.js}{5}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Methodology}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Requirements Elicitation and Analysis}{6}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Design Concept}{6}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Project Implementation}{7}{chapter.4}%
-\contentsline {chapter}{\nonumberline References}{8}{chapter*.3}%
+\contentsline {subsection}{\numberline {2.3.1}Component}{5}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}States and props}{5}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Class-based components}{6}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Life-cycle methods}{6}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Function components}{6}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}React Hooks}{6}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Virtual DOM}{7}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}Context API}{7}{subsection.2.3.8}%
+\contentsline {chapter}{\numberline {3}Methodology}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Requirements Elicitation and Analysis}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Design Concept}{8}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Project Implementation}{9}{chapter.4}%
+\contentsline {chapter}{\nonumberline References}{10}{chapter*.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

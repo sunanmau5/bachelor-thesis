@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  1 JUL 2022 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  2 JUL 2022 00:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1266,29 +1266,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 
+l.26 
       [3
 
 
-]
-Overfull \hbox (113.0525pt too wide) in paragraph at lines 43--44
-\T1/pplx/m/n/10.95 (-20) sion, and per-mis-sions. Each field is de-scribed in f
-ull at http://developer.chrome.com/extensions/manifest.html.
- []
-
-[4]) (./text/methodology.tex [5]
+] [4] [5] [6]) (./text/methodology.tex [7]
 chapter 3.
-) (./text/project-implementation.tex [6
+) (./text/project-implementation.tex [8
 
 
 ]
 chapter 4.
-) (./text/references.tex [7
+) (./text/references.tex [9
 
 
 ]
 chapter without number
-) (./text/eidesstattliche-erklaerung.tex [8
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+(./text/eidesstattliche-erklaerung.tex [10
 
 
 ])
@@ -1317,7 +1324,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--212
 -
  []
 
-[9] (./thesis.aux)
+[11] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
@@ -1325,26 +1332,28 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29182 strings out of 478268
- 521948 string characters out of 5846347
- 1288714 words of memory out of 5000000
- 46728 multiletter control sequences out of 15000+600000
- 509315 words of font info for 214 fonts, out of 8000000 for 9000
+ 29288 strings out of 478268
+ 523787 string characters out of 5846347
+ 1289714 words of memory out of 5000000
+ 46762 multiletter control sequences out of 15000+600000
+ 516636 words of font info for 254 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,11n,106p,10601b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf
--dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (14 pages, 221471 bytes).
+live/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/
+texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texm
+f-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2022/texmf-
+dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/font
+s/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (16 pages, 279482 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 56990 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 63710 words of extra memory for PDF output out of 74296 (max. 10000000)
 
