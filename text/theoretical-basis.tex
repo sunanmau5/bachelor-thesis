@@ -1,2 +1,67 @@
 \newpage
-\section{Theoretical Basis}
+\chapter{Theoretical Basis}
+
+%Browser Extension Background
+\section{Browser Extension Background}
+
+\subsection{Definition}
+
+Browser extensions or addons are third party programs, that can extend the functionality of browsers and improve users' browsing experience \autocite{some2019empoweb}. A browser extension, as opposed to a standard web page, is created specifically for a given browser and uses that browser's extension API. It was necessary to choose a browser as a result. There are frameworks that try to make it feasible to create an extension for several different browsers at once. Although the caliber of these frameworks was unclear, it was decided that the expense of potential problems and additional time spent debugging in many browsers outweighed the benefits.
+
+\subsection{Choice of Implementation Browser}
+
+The selection of a browser was based on a number of factors. The first was the browser's usage rate. This is significant since anyone who doesn't already have the necessary browser will need to download and install it. Drop-outs due to the installation process or being unfamiliar with a new browser can significantly raise the cost of conducting the survey. The ease of use of the API and simplicity of implementation were additional crucial criteria. The extension programming process should ideally only need a basic understanding of the extension API. The capabilities of the API offered by the browser was another factor considered. The extension needs to:
+
+\begin{enumerate}
+  \item Store a big amount of data on the client side
+  \item Read URL - so query parameters can be passed to the extension
+  \item Modify URL - so frequently used query parameters can be utilized
+\end{enumerate}
+
+Internet Explorer was the most challenging in terms of implementation simplicity. The features appeared to be restricted, and it needed knowledge of the Component Object Model (COM). [8] After reviewing the documentation, it was still unclear how tasks like making HTTP queries or changing the DOM would be carried out. The instructions appears to be primarily concerned with optional features like adding menu items and explorer bars. Thus, IE was eliminated from the list, leaving Firefox and Chrome as the only options.
+
+Both the Firefox and Chrome extension APIs had similar features. The fact that Firefox required knowing XUL (XML User Interface Language), Mozilla's XML-based language for creating application user interfaces, was one drawback. [9] Extensions for the Google Chrome browser can be created entirely in HTML, CSS, and JavaScript. The team members' familiarity with the languages and the simplicity of the solution were appealing. Additionally, it was discovered that the Chrome documentation was easy to grasp and was divided up into sections. Firefox's market share was roughly double that of Chrome. As a result, it was decided to develop a Google Chrome browser extension.
+
+
+%Chrome Extension Architecture
+\section{Chrome Extension Architecture}
+
+\subsection{Chrome Extension Basics}
+
+A Chrome extension is only a bundled collection of files (HTML, JavaScript, etc.) that enhance the browser's capabilities. [5] They also have access to the APIs that browsers provide for tasks like XMLHttpRequests and HTML5 features on web sites. The following files can be found in an extension:
+
+\begin{enumerate}
+ \item A manifest.json file
+ \item One or more HTML files
+ \item Any other files such as CSS or JavaScript needed by the extension to run
+\end{enumerate}
+
+The majority of extensions have a background page that contains their primary logic and state. They frequently also contain content scripts that can communicate with websites. Asynchronous message passing is used to communicate between the background page and the content scripts. Additionally, extensions can save data via localStorage and other HTML5 storage APIs.
+
+\subsection{Manifest Files}
+
+A manifest.json file is required for each extension. It includes crucial information about the extension, such its name, version, scripts used for its content, minimum Chrome version, and permissions. Each field is described in full at http://developer.chrome.com/extensions/manifest.html. The content-scripts field was the most crucial one for this expansion. Each study and content-related webpage need its own content script. Each one was defined in the scripts column, which also mapped each one to the appropriate URLs.
+
+\subsection{Content Scripts}
+
+JavaScript files called content scripts are used on websites to add new functionality. They have full control to modify the entire web page because they can directly access the Document Object Model (DOM) of these web sites. They do, however, have some restrictions. The following list of restrictions was taken from the documentation website [4]:
+
+\begin{enumerate}
+  \item Use chrome.* APIs
+  \item Use variables or functions defined by their extension's pages
+  \item Use variables or functions defined by web pages or by other content scripts
+\end{enumerate}
+
+The good news is that you can get around some of these restrictions, such the inability to use variables defined by their extension's pages, by sending messages to the background page of their parent extension.
+
+In order to locate and replace the proper HTML element, the content scripts are launched after the DOM has been loaded. Despite several drawbacks, this approach is effective. One is that the previous advertisement may be visible for a long period of time before it is replaced since the script must wait for the DOM to load. Users may notice a flicker as a result of this.
+
+\subsection{Background page}
+
+The last component of the extension is the background page.
+
+
+%React
+\section{React.js}
+
+React is a product of Facebook's engineering team, which is a JavaScript framework for creating user interfaces \autocite{gackenheimer2015introducing}. Because of its simplicity and straightforward but efficient development process, React is quite well-liked in the developer communities. Interactive user interfaces are simpler to develop with React. It effectively updates by accurately drawing each state's view's constituent parts, and it updates the application's data \autocite{islam2017reactjs}.

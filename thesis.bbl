@@ -1,15 +1,169 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{iyengar2000choice}
-Sheena~S Iyengar and Mark~R Lepper.
-\newblock When choice is demotivating: Can one desire too much of a good thing?
-\newblock {\em Journal of personality and social psychology}, 79(6):995, 2000.
+\datalist[entry]{nty/global//global/global}
+  \entry{gackenheimer2015introducing}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=GC}{%
+         family={Gackenheimer},
+         familyi={G\bibinitperiod},
+         given={Cory},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{GC1}
+    \strng{fullhash}{GC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booktitle}{Introduction to React}
+    \field{pages}{87\bibrangedash 106}
+    \field{title}{Introducing flux: An application architecture for react}
+    \field{year}{2015}
+  \endentry
 
-\bibitem{zuckerman1978importance}
-Miron Zuckerman, Joseph Porac, Drew Lathin, and Edward~L Deci.
-\newblock On the importance of self-determination for intrinsically-motivated
-  behavior.
-\newblock {\em Personality and social psychology bulletin}, 4(3):443--446,
-  1978.
+  \entry{islam2017reactjs}{article}{}
+    \name{author}{1}{}{%
+      {{hash=INN}{%
+         family={Islam\bibnamedelima Naim},
+         familyi={I\bibinitperiod\bibinitdelim N\bibinitperiod},
+         given={Naimul},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Metropolia Ammattikorkeakoulu}%
+    }
+    \strng{namehash}{INN1}
+    \strng{fullhash}{INN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{title}{ReactJS: An Open Source JavaScript Library for Front-end
+  Development}
+    \field{year}{2017}
+  \endentry
 
-\end{thebibliography}
+  \entry{iyengar2000choice}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ISS}{%
+         family={Iyengar},
+         familyi={I\bibinitperiod},
+         given={Sheena\bibnamedelima S},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=LMR}{%
+         family={Lepper},
+         familyi={L\bibinitperiod},
+         given={Mark\bibnamedelima R},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Psychological Association}%
+    }
+    \strng{namehash}{ISSLMR1}
+    \strng{fullhash}{ISSLMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{number}{6}
+    \field{pages}{995}
+    \field{title}{When choice is demotivating: Can one desire too much of a
+  good thing?}
+    \field{volume}{79}
+    \field{journaltitle}{Journal of personality and social psychology}
+    \field{year}{2000}
+  \endentry
+
+  \entry{some2019empoweb}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=SDF}{%
+         family={Som{\'e}},
+         familyi={S\bibinitperiod},
+         given={Doli{\`e}re\bibnamedelima Francis},
+         giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SDF1}
+    \strng{fullhash}{SDF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{2019 IEEE Symposium on Security and Privacy (SP)}
+    \field{pages}{227\bibrangedash 245}
+    \field{title}{Empoweb: empowering web applications with browser extensions}
+    \field{year}{2019}
+  \endentry
+
+  \entry{zuckerman1978importance}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZM}{%
+         family={Zuckerman},
+         familyi={Z\bibinitperiod},
+         given={Miron},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Porac},
+         familyi={P\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Lathin},
+         familyi={L\bibinitperiod},
+         given={Drew},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DEL}{%
+         family={Deci},
+         familyi={D\bibinitperiod},
+         given={Edward\bibnamedelima L},
+         giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sage Publications Sage CA: Thousand Oaks, CA}%
+    }
+    \strng{namehash}{ZM+1}
+    \strng{fullhash}{ZMPJLDDEL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{number}{3}
+    \field{pages}{443\bibrangedash 446}
+    \field{title}{On the importance of self-determination for
+  intrinsically-motivated behavior}
+    \field{volume}{4}
+    \field{journaltitle}{Personality and social psychology bulletin}
+    \field{year}{1978}
+  \endentry
+\enddatalist
+\endinput
