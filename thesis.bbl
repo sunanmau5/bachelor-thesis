@@ -61,6 +61,27 @@
     \field{year}{2015}
   \endentry
 
+  \entry{chrome2021service}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={Google},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{howpublished}{Online}
+    \field{title}{Service worker overview}
+    \verb{url}
+    \verb https://developer.chrome.com/docs/workbox/service-worker-overview/
+    \endverb
+    \field{year}{2022}
+  \endentry
+
   \entry{google2021what}{misc}{}
     \name{author}{1}{}{%
       {{hash=G}{%
@@ -136,6 +157,46 @@
     \field{year}{2000}
   \endentry
 
+  \entry{liu2012chrome}{inproceedings}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{4}{}{%
+      {{hash=LL}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Lei},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xinwen},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=YG}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Guanhua},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Songqing},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LL+1}
+    \strng{fullhash}{LLZXYGCS+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{booktitle}{NDSS}
+    \field{title}{Chrome Extensions: Threat Analysis and Countermeasures.}
+    \field{year}{2012}
+  \endentry
+
   \entry{maratkar2021re}{article}{}
     \name{author}{2}{}{%
       {{hash=MPS}{%
@@ -163,6 +224,46 @@
     \field{volume}{4}
     \field{journaltitle}{Iconic Research And Engineering Journal s}
     \field{year}{2021}
+  \endentry
+
+  \entry{phan2020react}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PHD}{%
+         family={Phan},
+         familyi={P\bibinitperiod},
+         given={Hong\bibnamedelima Duc},
+         giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PHD1}
+    \strng{fullhash}{PHD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{React framework: concept and implementation}
+    \field{year}{2020}
+  \endentry
+
+  \entry{react2020introducing}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=R}{%
+         family={React},
+         familyi={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{R1}
+    \strng{fullhash}{R1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{howpublished}{Online}
+    \field{title}{Introducing JSX}
+    \verb{url}
+    \verb https://reactjs.org/docs/introducing-jsx.html
+    \endverb
+    \field{year}{2020}
   \endentry
 
   \entry{some2019empoweb}{inproceedings}{}

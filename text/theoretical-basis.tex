@@ -19,7 +19,7 @@ The selection of a browser was based on a number of factors. The first was the b
 \end{enumerate}
 
 %TODO: update texts
-[outdated] Internet Explorer was the most challenging in terms of implementation simplicity. The features appeared to be restricted, and it needed knowledge of the Component Object Model (COM). [8] After reviewing the documentation, it was still unclear how tasks like making HTTP queries or changing the DOM would be carried out. The instructions appears to be primarily concerned with optional features like adding menu items and explorer bars. Thus, IE was eliminated from the list, leaving Firefox and Chrome as the only options.
+[outdated] Internet Explorer was the most challenging in terms of implementation simplicity. The features appeared to be restricted, and it needed knowledge of the COM. [8] After reviewing the documentation, it was still unclear how tasks like making HTTP queries or changing the DOM would be carried out. The instructions appears to be primarily concerned with optional features like adding menu items and explorer bars. Thus, IE was eliminated from the list, leaving Firefox and Chrome as the only options.
 
 %TODO: update texts
 [outdated] Both the Firefox and Chrome extension APIs had similar features. The fact that Firefox required knowing XUL (XML User Interface Language), Mozilla's XML-based language for creating application user interfaces, was one drawback. [9] Extensions for the Google Chrome browser can be created entirely in HTML, CSS, and JavaScript. The team members' familiarity with the languages and the simplicity of the solution were appealing. Additionally, it was discovered that the Chrome documentation was easy to grasp and was divided up into sections. Firefox's market share was roughly double that of Chrome. As a result, it was decided to develop a Google Chrome browser extension.
@@ -32,11 +32,11 @@ The selection of a browser was based on a number of factors. The first was the b
 
 Extensions are built on web technologies such as HTML, JavaScript, and CSS. They run in a separate, sandboxed execution environment and interact with the Chrome browser \autocite{google2021what}. They also have access to the APIs that browsers provide for tasks like XMLHttpRequests and HTML5 features on web sites. The following files can be found in an extension:
 
-\begin{enumerate}
+\begin{itemize}
  \item A manifest.json file
  \item One or more HTML files
  \item Any other files such as CSS or JavaScript needed by the extension to run
-\end{enumerate}
+\end{itemize}
 
 The majority of extensions have a background page that contains their primary logic and state. They frequently also contain content scripts that can communicate with websites. Asynchronous message passing is used to communicate between the background page and the content scripts. Additionally, extensions can save data via localStorage and other HTML5 storage APIs.
 
@@ -46,31 +46,23 @@ A manifest.json file is required for each extension. It includes crucial informa
 
 \subsection{Content Scripts}
 
-JavaScript files called content scripts are used on websites to add new functionality. They have full control to modify the entire web page because they can directly access the Document Object Model (DOM) of these web sites. They do, however, have some restrictions. The following list of restrictions was taken from the documentation website [4]:
+Content scripts are JavaScript files that are used on websites to add new functionality. They have full control to modify the entire web page because they can directly access the DOM of these web sites. The content script is injected into a tab when the web page is loaded, and runs in the same process space of the renderer of the web tab and can thus access its DOM objects. Injected content scripts in a tab can only communicate with the extension core via Chrome's IPC \autocite{liu2012chrome}.
 
-\begin{enumerate}
-  \item Use chrome.* APIs
-  \item Use variables or functions defined by their extension's pages
-  \item Use variables or functions defined by web pages or by other content scripts
-\end{enumerate}
+\subsection{Service Worker}
 
-The good news is that you can get around some of these restrictions, such the inability to use variables defined by their extension's pages, by sending messages to the background page of their parent extension.
+The Chrome extension platform switches from background pages to service workers in Manifest V3. A service worker is a script that your browser runs in the background, distinct from a web page, opening the door to features that don't need a web page or user input \autocite{chrome2021service}. This technology allows native-like experiences over the open web, including push notifications, robust offline support, background synchronization, and "Add to Home Screen." Service providers drew some of their inspiration from the background pages in Chrome Extensions, but improvements were added for the web.
 
-In order to locate and replace the proper HTML element, the content scripts are launched after the DOM has been loaded. Despite several drawbacks, this approach is effective. One is that the previous advertisement may be visible for a long period of time before it is replaced since the script must wait for the DOM to load. Users may notice a flicker as a result of this.
-
-\subsection{Background page}
-
-The last component of the extension is the background page.
+Service workers are specialized JavaScript assets that act as proxies between web browsers and web servers. They aim to improve reliability by providing offline access, as well as boost page performance \autocite{chrome2021service}. Websites are gradually improved by service workers through a lifetime akin to that of platform-specific programs.
 
 
 %React
-\section{React.js}
+\section{React}
 
-React is a product of Facebook's engineering team, which is a JavaScript framework for creating user interfaces \autocite{gackenheimer2015introducing}. Because of its simplicity and straightforward but efficient development process, React is quite well-liked in the developer communities. Interactive user interfaces are simpler to develop with React. It effectively updates by accurately drawing each state's view's constituent parts, and it updates the application's data \autocite{islam2017reactjs}. The core objective of React is to provide the best possible rendering performance. Its strength comes from the focus on individual components. Using reusable components, it is found to be easy development for developers to design rich UI's. React incorporates with View part from MVC (Model-View-Controller) model \autocite{maratkar2021re}. React implements One Way dataflow so that it gets easier than traditional data binding. React uses virtual DOM it offers not so complex programming with faster execution. It makes use of composition to create intricate user interfaces out of simple building blocks known as Components \autocite{david2020building}.
+React is a product of Facebook's engineering team, which is a JavaScript framework for creating user interfaces \autocite{gackenheimer2015introducing}. Because of its simplicity and straightforward but efficient development process, React is quite well-liked in the developer communities. Interactive user interfaces are simpler to develop with React. It effectively updates by accurately drawing each state's view's constituent parts, and it updates the application's data \autocite{islam2017reactjs}. The core objective of React is to provide the best possible rendering performance. Its strength comes from the focus on individual components. Using reusable components, it is found to be easy development for developers to design rich UI's. React incorporates with View part from MVC model \autocite{maratkar2021re}. React implements One Way dataflow so that it gets easier than traditional data binding. React uses virtual DOM it offers not so complex programming with faster execution. It makes use of composition to create intricate user interfaces out of simple building blocks known as Components \autocite{david2020building}.
 
 \subsection{Component}
 
-Each component has a render method, which can either return HTML or another React component, and returns a description of what to render. A combination of HTML and Javascript known as JSX is used to describe what should be rendered. It is possible to specify a component as a class or a function. Props and state are crucial components when creating React applications.
+Each component has a render method, which can either return HTML or another React component, and returns a description of what to render. A combination of HTML and Javascript known as JSX is used to describe what should be rendered. A more detailed explanation of JSX is included in the JSX section. It is possible to specify a component as a class or a function. Props and state are crucial components when creating React applications.
 
 \subsection{States and props}
 
@@ -82,7 +74,7 @@ Using props, data moves down the component tree in React. Callback functions are
 
 \subsection{Class-based components}
 
-A class-based Component is created by extending the React.Component class. The state of a class-based component is updated using the method setState() and read by using this.state within the class. Using the setState() method makes the component re-render which is not the case when mutating the state directly. Class-based components include life-cycle methods that can be used to create more complex behavior.
+A class-based Component is created by extending the React.Component class. The state of a class-based component is updated using the method setState() and read by using this.state within the class. Using the setState() method makes the component re-render which is not the case when mutating the state directly. Class-based components include life-cycle methods that can be used to create more complex behavior. It also requires a render method to return JSX elements.
 
 \subsection{Life-cycle methods}
 
@@ -90,7 +82,13 @@ Life-cycle methods are built-in functions that are called whenever a state or pr
 
 \subsection{Function components}
 
-A pure function that takes props as input and outputs a JSX element is referred to as a function component. React Hooks are used to give the function component the same access to state and life-cycle methods as class-based components. In compared to class-based components, using function components with hooks might make React applications smaller and more manageable.
+A pure function that takes props as input and outputs a JSX element is referred to as a function component. React Hooks are used to give the function component the same access to state and life-cycle methods as class-based components. In compared to class-based components, using function components with hooks might make React applications smaller and more manageable. There are a couple reasons why function component is preverable \autocite{phan2020react}:
+
+\begin{itemize}
+  \item Faster development, easier to read and test, debug and reusable; because function components do not have state and life-cycle-hook. Function component is a straightforward JavaScript function.
+  \item Performance will be improved since function components are smaller and compiles more quickly than class components.
+  \item There is no need to consider how to divide the component into a container and a standard UI component when utilizing a function component.
+\end{itemize}
 
 \subsection{React Hooks}
 
@@ -111,3 +109,9 @@ By establishing a new Virtual DOM subtree when data in the application changes a
 The Context API is a built-in tool that allows data to be shared between React components without the need for props-drilling. The createContext method in the React library is used to initialize a Context, which can be used by several components in the component tree. A Provider present on the Context instance is used to add data to the Context and make it accessible to children components. The data for the Context is specified in the Provider, a component that has a single property named value and accepts variables, functions, or objects as values. The Context data can be retrieved from any child component using a Consumer that is also available on the Context instance by enclosing children components inside the Provider component. The application uses a variety of contexts for various purposes rather than being restricted to a single instance.
 
 Context API's callback function inheritance allows a child component to change the state of a parent component. Context is used, according to the official documentation, to exchange information that is regarded as global for the tree of React components, such as whether a user is logged in, the application's theme, or the language preferences. Because they depend on information provided by context from another component, using context may reduce the reusability of components. UseContext functions as the Consumer and grants access to the data for a functional component encased in a Context Provider.
+
+\subsection{JSX}
+
+A React extension called JSX makes it simple for web designers to change the DOM using straightforward HTML-style code. Additionally, as all current web browsers are supported by React JS, JSX is interoperable with any browser platform.
+
+Most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages \autocite{react2020introducing}. The advantages of JSX include the fact that it makes writing templates for users who are familiar with HTML simpler and faster. Performance improves when code is compiled into JavaScript \autocite{phan2020react}.

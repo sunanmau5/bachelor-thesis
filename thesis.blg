@@ -19,50 +19,54 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: thesis-blx.bib
 Database file #2: thesis.bib
+Warning--entry type for "chrome2021service" isn't style-file defined
+--line 19 of file thesis.bib
+Warning--entry type for "react2020introducing" isn't style-file defined
+--line 36 of file thesis.bib
 Warning--entry type for "google2021what" isn't style-file defined
---line 11 of file thesis.bib
+--line 46 of file thesis.bib
 Biblatex version: 3.17
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 9 entries,
+You've used 13 entries,
             6399 wiz_defined-function locations,
-            1249 strings with 10285 characters,
-and the built_in function-call counts, 54487 in all, are:
-= -- 4207
-> -- 902
-< -- 324
-+ -- 1291
-- -- 275
-* -- 3674
-:= -- 5643
+            1266 strings with 10705 characters,
+and the built_in function-call counts, 75460 in all, are:
+= -- 5678
+> -- 1251
+< -- 421
++ -- 1826
+- -- 406
+* -- 5082
+:= -- 7843
 add.period$ -- 0
-call.type$ -- 9
-change.case$ -- 196
+call.type$ -- 13
+change.case$ -- 232
 chr.to.int$ -- 42
-cite$ -- 16
-duplicate$ -- 5348
-empty$ -- 4976
-format.name$ -- 453
-if$ -- 11485
+cite$ -- 24
+duplicate$ -- 7767
+empty$ -- 6933
+format.name$ -- 678
+if$ -- 15788
 int.to.chr$ -- 0
-int.to.str$ -- 21
+int.to.str$ -- 31
 missing$ -- 0
-newline$ -- 233
-num.names$ -- 460
-pop$ -- 2792
+newline$ -- 334
+num.names$ -- 630
+pop$ -- 4181
 preamble$ -- 1
-purify$ -- 224
+purify$ -- 274
 quote$ -- 0
-skip$ -- 1739
+skip$ -- 2359
 stack$ -- 0
-substring$ -- 7592
-swap$ -- 1169
-text.length$ -- 231
-text.prefix$ -- 8
+substring$ -- 9974
+swap$ -- 1658
+text.length$ -- 331
+text.prefix$ -- 12
 top$ -- 1
-type$ -- 293
+type$ -- 427
 warning$ -- 0
-while$ -- 657
+while$ -- 941
 width$ -- 0
-write$ -- 225
-(There was 1 warning)
+write$ -- 322
+(There were 3 warnings)
