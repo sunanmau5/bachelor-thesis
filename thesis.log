@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  23 JUL 2022 03:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  23 JUL 2022 03:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1147,7 +1147,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has b
 <to be read again> 
                    \relax 
 l.23   \item T
-              he port number denotes the technical \textit{gateway} used to ... [3
+              he port number denotes the technical "gateway" used to access ... [3
 
 
 ] [4] [5] [6] [7] [8] [9]) (./text/methodology.tex [10]
@@ -1211,46 +1211,58 @@ LaTeX Warning: Hyper reference `acro:HTML' on page 15 undefined on input line 9.
 LaTeX Warning: Hyper reference `acro:HTML' on page 15 undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:JS' on page 15 undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:HTTP' on page 15 undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:JS' on page 15 undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:HTTP' on page 15 undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:JSX' on page 15 undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:HTTPS' on page 15 undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:JSX' on page 15 undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:HTTPS' on page 15 undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:MVC' on page 15 undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:JS' on page 15 undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:MVC' on page 15 undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:JS' on page 15 undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:Props' on page 15 undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:JSX' on page 15 undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:Props' on page 15 undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:JSX' on page 15 undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:UI' on page 15 undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:MVC' on page 15 undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:UI' on page 15 undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:MVC' on page 15 undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:URL' on page 15 undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:Props' on page 15 undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:URL' on page 15 undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:Props' on page 15 undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:XML' on page 15 undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:UI' on page 15 undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:XML' on page 15 undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:UI' on page 15 undefined on input line 16.
+
+
+LaTeX Warning: Hyper reference `acro:URL' on page 15 undefined on input line 17.
+
+
+LaTeX Warning: Hyper reference `acro:URL' on page 15 undefined on input line 17.
+
+
+LaTeX Warning: Hyper reference `acro:XML' on page 15 undefined on input line 18.
+
+
+LaTeX Warning: Hyper reference `acro:XML' on page 15 undefined on input line 18.
 
 ) (./text/eidesstattliche-erklaerung.tex [15
 
@@ -1291,18 +1303,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30014 strings out of 478268
- 535127 string characters out of 5846347
+ 30016 strings out of 478268
+ 535135 string characters out of 5846347
  1304544 words of memory out of 5000000
- 47416 multiletter control sequences out of 15000+600000
- 519231 words of font info for 273 fonts, out of 8000000 for 9000
+ 47420 multiletter control sequences out of 15000+600000
+ 519021 words of font info for 270 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,8n,106p,10636b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (22 pages, 306524 bytes).
+Output written on thesis.pdf (22 pages, 305995 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
+ 419 PDF objects out of 1000 (max. 8388607)
+ 372 compressed objects within 4 object streams
+ 91 named destinations out of 1000 (max. 500000)
  67886 words of extra memory for PDF output out of 74296 (max. 10000000)
 
