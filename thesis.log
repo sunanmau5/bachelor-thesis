@@ -1,41 +1,30 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  3 JUL 2022 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.17)  23 JUL 2022 03:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**thesis.tex
-(./thesis.tex
+**/Users/mba/Documents/htw/ba/ba-tex/thesis.tex
+(/Users/mba/Documents/htw/ba/ba-tex/thesis.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24>
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrbook.cls
+L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2021/11/13 v3.35 KOMA-Script document class (book)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
 Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
-
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlogo.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlogo.sty
 Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
-)))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
 Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line
- 368.
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/tocbasic.sty
 Package: tocbasic 2021/11/13 v3.35 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip47
 \scr@dte@tocline@numbox=\box50
@@ -49,14 +38,10 @@ Class scrbook Info: You've used standard option `oneside'.
 (scrbook)           you'd have to use `twoside=false' there
 (scrbook)           instead of `oneside', too.
 Class scrbook Info: File `scrsize11pt.clo' used instead of
-(scrbook)           file `scrsize11.clo' to setup font sizes on input line 2490
-.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2021/11/13 v3.35 KOMA-Script font size class option (11pt
-)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/typearea.sty
+(scrbook)           file `scrsize11.clo' to setup font sizes on input line 2490.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2021/11/13 v3.35 KOMA-Script font size class option (11pt)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2021/11/13 v3.35 KOMA-Script package (type area)
 \ta@bcor=\skip48
 \ta@div=\count185
@@ -131,43 +116,35 @@ Class scrbook Info: using compatibility default `afterindent=bysign'
 \c@pti@nb@sid@b@x=\box51
 Package tocbasic Info: babel extension for `lof' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 6962.
-
 \scr@dte@figure@maxnumwidth=\skip62
 \c@figure=\count193
 Package tocbasic Info: babel extension for `lot' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 6978.
-
 \scr@dte@table@maxnumwidth=\skip63
 \c@table=\count194
 Class scrbook Info: Redefining `\numberline' on input line 7146.
 \bibindent=\dimen138
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/latin1.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip64
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen139
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
 \inf@bad=\count195
@@ -207,8 +184,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks24
 \thm@bodyfont=\toks25
@@ -219,58 +195,44 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip68
 \thm@headsep=\skip69
 \dth@everypar=\toks29
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/xpatch/xpatch.sty
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-02-24 L3 programming layer (loader) 
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count273
 \l__pdf_internal_box=\box54
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2022-01-12 L3 Experimental document command parser
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count274
 ))
 Class scrbook Info: amsthm's \deferred@thm@head patched.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/02/26 3.73 The Babel package
 \babel@savecnt=\count275
 \U@D=\dimen148
 \l@unhyphenated=\language87
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count276
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthogra
-phy)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthogr
-aphy)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthography)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthography)
 Package babel Info: Making " an active character on input line 122.
-))
-(/usr/local/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -278,25 +240,19 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language21). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language21). Reported on input line 108.
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/marvosym/marvosym.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@reset=\count277
 \csq@gtype=\count278
@@ -305,24 +261,18 @@ Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@maxlvl=\count281
 \csq@tshold=\count282
 \csq@ltx@everypar=\toks30
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/acronym/acronym.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/bigfoot/suffix.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.tex
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.tex
 \integerpart=\count283
 \decimalpart=\count284
 )
@@ -332,70 +282,52 @@ Package: xstring 2021/07/21 v1.84 String manipulations (CT)
 )
 \c@satz=\count285
 \c@algorithmus=\count286
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen149
 \Hy@linkcounter=\count287
 \Hy@pagecounter=\count288
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count289
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -410,13 +342,10 @@ Package hyperref Info: Bookmarks ON on input line 4390.
 \c@Hy@tempcnt=\count290
 LaTeX Info: Redefining \url on input line 4749.
 \XeTeXLinkMargin=\dimen150
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count291
 \Field@Width=\dimen151
@@ -430,8 +359,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6052.
 Package hyperref Info: PDF/A mode OFF on input line 6057.
 LaTeX Info: Redefining \ref on input line 6097.
 LaTeX Info: Redefining \pageref on input line 6101.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -440,39 +368,30 @@ package with kernel methods
 \c@Hfootnote=\count294
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
-kage
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
 \Fld@listcount=\count295
 \c@bookmark@seq@number=\count296
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip70
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/logreq/logreq.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count297
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/logreq/logreq.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@tabx@nest=\count298
@@ -533,8 +452,7 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 \c@mincompwidth=\count342
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-dm.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -625,14 +543,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip92
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-compat.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load BibTeX backend compatibility...
 Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-bibtex.def
 File: blx-bibtex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
 
 
@@ -660,21 +576,18 @@ File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
 File: numeric.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count420
 \c@bbx:relatedtotal=\count421
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
 File: numeric.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -690,30 +603,23 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'latin1' detected.
 Package biblatex Info: Document encoding not detected as UTF8.
 (biblatex)             Setting 'casechanger=latex2e'.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-case-latex2e.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/blx-case-latex2e.sty
 Package: blx-case-latex2e 2022/02/02 v3.17 biblatex compatibility (PK/MW)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathpazo.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/mathpazo.sty
 Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup6
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+pplx on input line 1
-12.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pplx.fd
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 112.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
 \MT@toks=\toks32
 \MT@tempbox=\box55
@@ -725,23 +631,18 @@ LaTeX Info: Redefining \textls on input line 1195.
 \MT@outer@kern=\dimen153
 LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
 \MT@listname@count=\count423
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2022/03/14 v3.0d Definitions specific to pdftex (RS)
-
 LaTeX Info: Redefining \lsstyle on input line 900.
 LaTeX Info: Redefining \lslig on input line 900.
 \MT@outer@space=\skip93
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count424
@@ -756,11 +657,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen160
 \Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks33
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@tempdima=\dimen162
 \captionmargin=\dimen163
@@ -771,16 +670,13 @@ Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@parindent=\dimen168
 \caption@hangindent=\dimen169
 Package caption Info: KOMA-Script document class detected.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption-koma.sto
-File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
-KOMA-Script document classes (AR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption-koma.sto
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the KOMA-Script document classes (AR)
 ))
 \c@caption@flags=\count427
 \c@continuedfloat=\count428
 Package caption Info: hyperref package is loaded.
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen170
 \lightrulewidth=\dimen171
@@ -799,13 +695,10 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count431
 \@lastruleclass=\count432
 \@thisrulewidth=\dimen182
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lettrine/lettrine.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/lettrine/lettrine.sty
 File: lettrine.sty 2020-03-14 v2.23 (Daniel Flipo)
-
-(/usr/local/texlive/2022/texmf-dist/tex/generic/minifp/minifp.sty
-Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack
--based programing language.
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/minifp/minifp.sty
+Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack-based programing language.
 \MFP@loopctr=\count433
 )
 \c@DefaultLines=\count434
@@ -836,8 +729,7 @@ Package: minifp 2013/12/30 v0.96. Macros for real number operations and a stack
 \Llist@everypar=\toks34
 
 Loading lettrine.cfg
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lettrine/lettrine.cfg))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lettrine/lettrine.cfg)) (/usr/local/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip94
 \enit@outerparindent=\dimen258
@@ -845,8 +737,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box58
 \enit@count@id=\count438
 \enitdp@description=\count439
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box59
 \beforetitleunit=\skip95
@@ -897,8 +788,7 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              package `fancyhdr' on input line 69.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
-rs
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip97
 \f@nch@O@elh=\skip98
 \f@nch@O@erh=\skip99
@@ -910,16 +800,14 @@ rs
 \f@nch@O@orf=\skip105
 )
 
-Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 73.
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 73.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip106
 \thanksmargin=\skip107
 \droptitle=\skip108
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count440
 \lst@gtempboxa=\box60
 \lst@token=\toks37
@@ -932,35 +820,29 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \lst@newlines=\count444
 \lst@lineno=\count445
 \lst@maxwidth=\dimen267
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count446
 \lst@skipnumbers=\count447
 \lst@framebox=\box61
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-
-(./thesis.aux)
+ (./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
@@ -984,8 +866,7 @@ LaTeX Font Info:    ... okay on input line 125.
 Package scrbase Info: activating english \contentsname on input line 125.
 Package scrbase Info: activating english \listfigurename on input line 125.
 Package scrbase Info: activating english \listtablename on input line 125.
-
-(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count448
 \scratchdimen=\dimen268
@@ -1000,23 +881,16 @@ Package scrbase Info: activating english \listtablename on input line 125.
 \everyMPtoPDFconversion=\toks39
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 125.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
-ty
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count454
@@ -1036,35 +910,29 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
 (scrbook)           before \begin{document} on input line 125.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count455
 ))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
 File: ngerman.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 ))
 Package biblatex Info: Input encoding 'latin1' detected.
@@ -1077,8 +945,13 @@ Package biblatex Info: Data encoding 'latin1' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
+ (./thesis.bbl
 
-(./thesis.bbl)
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'mozilla2022url':
+(biblatex)                - Invalid format of field 'month'.
+
+)
 Package biblatex Info: Reference section=0 on input line 125.
 Package biblatex Info: Reference segment=0 on input line 125.
 LaTeX Info: Redefining \microtypecontext on input line 125.
@@ -1096,8 +969,7 @@ LaTeX Info: Redefining \showhyphens on input line 125.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-ppl.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 *geometry* driver: auto-detecting
@@ -1142,22 +1014,19 @@ Package caption Info: End \AtBeginDocument code.
 <assets/HTW_Berlin_Logo_farbig.jpg, id=4, 114.9093pt x 68.4156pt>
 File: assets/HTW_Berlin_Logo_farbig.jpg Graphic file (type jpg)
 <use assets/HTW_Berlin_Logo_farbig.jpg>
-Package pdftex.def Info: assets/HTW_Berlin_Logo_farbig.jpg  used on input line 
-131.
+Package pdftex.def Info: assets/HTW_Berlin_Logo_farbig.jpg  used on input line 131.
 (pdftex.def)             Requested size: 114.90901pt x 68.41542pt.
 [1
 
 
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./asset
-s/HTW_Berlin_Logo_farbig.jpg>]
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./assets/HTW_Berlin_Logo_farbig.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
 [2]
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-91.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 191.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1166,37 +1035,27 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [3]
-Package tocbasic Info: character protrusion at toc deactivated on input line 20
-1.
-
-(./thesis.toc
-LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 
-3.
+Package tocbasic Info: character protrusion at toc deactivated on input line 201.
+ (./thesis.toc
+LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 3.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-3.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlzplm.fd
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 3.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-3.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omszplm.fd
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 3.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-3.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxzplm.fd
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 3.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 3.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1205,18 +1064,15 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 3.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 3.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 3.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 3.
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-3.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 3.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1232,14 +1088,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 20
-2.
-
-(./thesis.lof)
+LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 202.
+ [2]
+Package tocbasic Info: character protrusion at lof deactivated on input line 202.
+ (./thesis.lof)
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [2
+ [3
 
 
 ] (./text/introduction.tex
@@ -1260,57 +1117,21 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              deprecated \float@addtolist interface.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15 
+l.12 
       [1
 
 
 ]) (./text/theoretical-basis.tex
-LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 1.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \newpage
              [2]
 chapter 2.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.26 
-      [3
-
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
-36.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pplx.fd
-File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
-)
-[4] [5] [6] [7]) (./text/methodology.tex [8]
-chapter 3.
-) (./text/project-implementation.tex [9
-
-
-]
-chapter 4.
-) (./text/references.tex [10
-
-
-]
-chapter without number
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplx/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
-.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 10.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1318,116 +1139,120 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 22.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1pplx.fd
+File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
+)
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23   \item T
+              he port number denotes the technical \textit{gateway} used to ... [3
 
-Overfull \hbox (12.57108pt too wide) in paragraph at lines 9--9
-[]\T1/pplx/m/n/10.95 (-20) React. \T1/pplx/m/it/10.95 (-20) In-tro-duc-ing JSX\
-T1/pplx/m/n/10.95 (-20) . On-line. 2020. \T1/pplx/m/sc/10.95 (-20) url\T1/pplx/
-m/n/10.95 (-20) : []$\T1/cmtt/m/n/10.95 https : / / reactjs . org / docs / intr
-oducing -[]
+
+] [4] [5] [6] [7] [8] [9]) (./text/methodology.tex [10]
+chapter 3.
+
+Overfull \hbox (1.94691pt too wide) in paragraph at lines 6--7
+\T1/pplx/m/n/10.95 (-20) The soft-ware re-quire-ments are clas-si-fied into func-tional re-quire-ments and non-functional
  []
 
-) (./text/abbreviations.tex [11
+[11
+
+
+]) (./text/project-implementation.tex [12]
+chapter 4.
+) (./text/references.tex [13
+
+
+]
+chapter without number
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (12.57108pt too wide) in paragraph at lines 9--9
+[]\T1/pplx/m/n/10.95 (-20) React. \T1/pplx/m/it/10.95 (-20) In-tro-duc-ing JSX\T1/pplx/m/n/10.95 (-20) . On-line. 2020. \T1/pplx/m/sc/10.95 (-20) url\T1/pplx/m/n/10.95 (-20) : []$\T1/cmtt/m/n/10.95 https : / / reactjs . org / docs / introducing -[]
+ []
+
+) (./text/abbreviations.tex [14
 
 
 ]
 chapter 5.
 
-LaTeX Warning: Hyper reference `acro:API' on page 12 undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:API' on page 15 undefined on input line 5.
 
 
-
-LaTeX Warning: Hyper reference `acro:API' on page 12 undefined on input line 5.
-
+LaTeX Warning: Hyper reference `acro:API' on page 15 undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:COM' on page 12 undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:COM' on page 15 undefined on input line 6.
 
 
-
-LaTeX Warning: Hyper reference `acro:COM' on page 12 undefined on input line 6.
-
+LaTeX Warning: Hyper reference `acro:COM' on page 15 undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:CSS' on page 12 undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:CSS' on page 15 undefined on input line 7.
 
 
-
-LaTeX Warning: Hyper reference `acro:CSS' on page 12 undefined on input line 7.
-
+LaTeX Warning: Hyper reference `acro:CSS' on page 15 undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:DOM' on page 12 undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:DOM' on page 15 undefined on input line 8.
 
 
-
-LaTeX Warning: Hyper reference `acro:DOM' on page 12 undefined on input line 8.
-
+LaTeX Warning: Hyper reference `acro:DOM' on page 15 undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:HTML' on page 12 undefined on input line 9
-.
+LaTeX Warning: Hyper reference `acro:HTML' on page 15 undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:HTML' on page 12 undefined on input line 9
-.
+LaTeX Warning: Hyper reference `acro:HTML' on page 15 undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:JS' on page 12 undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:JS' on page 15 undefined on input line 10.
 
 
-
-LaTeX Warning: Hyper reference `acro:JS' on page 12 undefined on input line 10.
-
+LaTeX Warning: Hyper reference `acro:JS' on page 15 undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:JSX' on page 12 undefined on input line 11
-.
+LaTeX Warning: Hyper reference `acro:JSX' on page 15 undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:JSX' on page 12 undefined on input line 11
-.
+LaTeX Warning: Hyper reference `acro:JSX' on page 15 undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:MVC' on page 12 undefined on input line 12
-.
+LaTeX Warning: Hyper reference `acro:MVC' on page 15 undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:MVC' on page 12 undefined on input line 12
-.
+LaTeX Warning: Hyper reference `acro:MVC' on page 15 undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:Props' on page 12 undefined on input line 
-13.
+LaTeX Warning: Hyper reference `acro:Props' on page 15 undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:Props' on page 12 undefined on input line 
-13.
+LaTeX Warning: Hyper reference `acro:Props' on page 15 undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:UI' on page 12 undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:UI' on page 15 undefined on input line 14.
 
 
-
-LaTeX Warning: Hyper reference `acro:UI' on page 12 undefined on input line 14.
-
+LaTeX Warning: Hyper reference `acro:UI' on page 15 undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:URL' on page 12 undefined on input line 15
-.
+LaTeX Warning: Hyper reference `acro:URL' on page 15 undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:URL' on page 12 undefined on input line 15
-.
+LaTeX Warning: Hyper reference `acro:URL' on page 15 undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:XML' on page 12 undefined on input line 16
-.
+LaTeX Warning: Hyper reference `acro:XML' on page 15 undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:XML' on page 12 undefined on input line 16
-.
+LaTeX Warning: Hyper reference `acro:XML' on page 15 undefined on input line 16.
 
-) (./text/eidesstattliche-erklaerung.tex [12
+) (./text/eidesstattliche-erklaerung.tex [15
 
 
 ])
@@ -1452,11 +1277,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--214
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--214
-\T1/pplx/m/n/10.95 (+20) ------------------------------------------------------
--
+\T1/pplx/m/n/10.95 (+20) -------------------------------------------------------
  []
 
-[13] (./thesis.aux)
+[16] (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1467,28 +1291,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29966 strings out of 478268
- 534051 string characters out of 5846347
- 1301599 words of memory out of 5000000
- 47396 multiletter control sequences out of 15000+600000
- 518575 words of font info for 264 fonts, out of 8000000 for 9000
+ 30014 strings out of 478268
+ 535127 string characters out of 5846347
+ 1304544 words of memory out of 5000000
+ 47416 multiletter control sequences out of 15000+600000
+ 519231 words of font info for 273 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,8n,106p,10601b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texm
-f-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2022/texmf-
-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-di
-st/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/font
-s/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
-/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (18 pages, 290682 bytes).
+ 108i,8n,106p,10636b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (22 pages, 306524 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
- 74 named destinations out of 1000 (max. 500000)
- 67822 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 67886 words of extra memory for PDF output out of 74296 (max. 10000000)
 

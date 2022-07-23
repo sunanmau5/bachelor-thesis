@@ -19,54 +19,56 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: thesis-blx.bib
 Database file #2: thesis.bib
+Warning--entry type for "mozilla2022url" isn't style-file defined
+--line 11 of file thesis.bib
 Warning--entry type for "chrome2021service" isn't style-file defined
---line 19 of file thesis.bib
+--line 47 of file thesis.bib
 Warning--entry type for "react2020introducing" isn't style-file defined
---line 36 of file thesis.bib
+--line 65 of file thesis.bib
 Warning--entry type for "google2021what" isn't style-file defined
---line 46 of file thesis.bib
+--line 76 of file thesis.bib
 Biblatex version: 3.17
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 13 entries,
+You've used 16 entries,
             6399 wiz_defined-function locations,
-            1266 strings with 10705 characters,
-and the built_in function-call counts, 75460 in all, are:
-= -- 5678
-> -- 1251
-< -- 421
-+ -- 1826
-- -- 406
-* -- 5082
-:= -- 7843
+            1282 strings with 11021 characters,
+and the built_in function-call counts, 91959 in all, are:
+= -- 6823
+> -- 1550
+< -- 500
++ -- 2242
+- -- 520
+* -- 6263
+:= -- 9556
 add.period$ -- 0
-call.type$ -- 13
-change.case$ -- 232
-chr.to.int$ -- 42
-cite$ -- 24
-duplicate$ -- 7767
-empty$ -- 6933
-format.name$ -- 678
-if$ -- 15788
+call.type$ -- 16
+change.case$ -- 260
+chr.to.int$ -- 43
+cite$ -- 30
+duplicate$ -- 9589
+empty$ -- 8455
+format.name$ -- 858
+if$ -- 19196
 int.to.chr$ -- 0
-int.to.str$ -- 31
+int.to.str$ -- 37
 missing$ -- 0
-newline$ -- 334
-num.names$ -- 630
-pop$ -- 4181
+newline$ -- 411
+num.names$ -- 753
+pop$ -- 5218
 preamble$ -- 1
-purify$ -- 274
+purify$ -- 314
 quote$ -- 0
-skip$ -- 2359
+skip$ -- 2861
 stack$ -- 0
-substring$ -- 9974
-swap$ -- 1658
-text.length$ -- 331
-text.prefix$ -- 12
+substring$ -- 11913
+swap$ -- 2046
+text.length$ -- 411
+text.prefix$ -- 15
 top$ -- 1
-type$ -- 427
+type$ -- 527
 warning$ -- 0
-while$ -- 941
+while$ -- 1154
 width$ -- 0
-write$ -- 322
-(There were 3 warnings)
+write$ -- 396
+(There were 4 warnings)
