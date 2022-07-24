@@ -300,6 +300,41 @@
     \field{year}{2020}
   \endentry
 
+  \entry{qu2021study}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=QJ}{%
+         family={Qu},
+         familyi={Q\bibinitperiod},
+         given={Jiaming},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=AJ}{%
+         family={Arguello},
+         familyi={A\bibinitperiod},
+         given={Jaime},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yue},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QJAJWY1}
+    \strng{fullhash}{QJAJWY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{booktitle}{Proceedings of the 30th ACM International Conference on
+  Information \& Knowledge Management}
+    \field{pages}{1498\bibrangedash 1507}
+    \field{title}{A Study of Explainability Features to Scrutinize Faceted
+  Filtering Results}
+    \field{year}{2021}
+  \endentry
+
   \entry{react2020introducing}{misc}{}
     \name{author}{1}{}{%
       {{hash=R}{%
@@ -365,6 +400,52 @@
     \field{volume}{137035152}
     \field{journaltitle}{ISBN-10}
     \field{year}{2011}
+  \endentry
+
+  \entry{w3c2016search}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=W}{%
+         family={W3C},
+         familyi={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{W1}
+    \strng{fullhash}{W1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{howpublished}{Online}
+    \field{title}{G161: Providing a search function to help users find content}
+    \verb{url}
+    \verb https://www.w3.org/TR/WCAG20-TECHS/G161.html
+    \endverb
+    \field{year}{2016}
+  \endentry
+
+  \entry{whitenton2014filters}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=WK}{%
+         family={Whitenton},
+         familyi={W\bibinitperiod},
+         given={Kathryn},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{Navigation}
+    \strng{namehash}{WK1}
+    \strng{fullhash}{WK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{howpublished}{Online}
+    \field{title}{Filters vs. Facets: Definitions}
+    \verb{url}
+    \verb https://www.nngroup.com/articles/filters-vs-facets/
+    \endverb
+    \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{zuckerman1978importance}{article}{}

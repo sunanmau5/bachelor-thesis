@@ -19,56 +19,60 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: thesis-blx.bib
 Database file #2: thesis.bib
-Warning--entry type for "mozilla2022url" isn't style-file defined
+Warning--entry type for "w3c2016search" isn't style-file defined
 --line 11 of file thesis.bib
+Warning--entry type for "whitenton2014filters" isn't style-file defined
+--line 30 of file thesis.bib
+Warning--entry type for "mozilla2022url" isn't style-file defined
+--line 42 of file thesis.bib
 Warning--entry type for "chrome2021service" isn't style-file defined
---line 47 of file thesis.bib
+--line 79 of file thesis.bib
 Warning--entry type for "react2020introducing" isn't style-file defined
---line 65 of file thesis.bib
+--line 97 of file thesis.bib
 Warning--entry type for "google2021what" isn't style-file defined
---line 76 of file thesis.bib
+--line 108 of file thesis.bib
 Biblatex version: 3.17
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 16 entries,
+You've used 19 entries,
             6399 wiz_defined-function locations,
-            1282 strings with 11021 characters,
-and the built_in function-call counts, 91959 in all, are:
-= -- 6823
-> -- 1550
-< -- 500
-+ -- 2242
-- -- 520
-* -- 6263
-:= -- 9556
+            1299 strings with 11514 characters,
+and the built_in function-call counts, 107431 in all, are:
+= -- 7853
+> -- 1849
+< -- 583
++ -- 2657
+- -- 634
+* -- 7332
+:= -- 11153
 add.period$ -- 0
-call.type$ -- 16
-change.case$ -- 260
-chr.to.int$ -- 43
-cite$ -- 30
-duplicate$ -- 9589
-empty$ -- 8455
-format.name$ -- 858
-if$ -- 19196
+call.type$ -- 19
+change.case$ -- 287
+chr.to.int$ -- 44
+cite$ -- 36
+duplicate$ -- 11416
+empty$ -- 9861
+format.name$ -- 1038
+if$ -- 22369
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 43
 missing$ -- 0
-newline$ -- 411
-num.names$ -- 753
-pop$ -- 5218
+newline$ -- 490
+num.names$ -- 876
+pop$ -- 6255
 preamble$ -- 1
-purify$ -- 314
+purify$ -- 353
 quote$ -- 0
-skip$ -- 2861
+skip$ -- 3362
 stack$ -- 0
-substring$ -- 11913
-swap$ -- 2046
-text.length$ -- 411
-text.prefix$ -- 15
+substring$ -- 13500
+swap$ -- 2438
+text.length$ -- 495
+text.prefix$ -- 18
 top$ -- 1
-type$ -- 527
+type$ -- 627
 warning$ -- 0
-while$ -- 1154
+while$ -- 1369
 width$ -- 0
-write$ -- 396
-(There were 4 warnings)
+write$ -- 472
+(There were 6 warnings)

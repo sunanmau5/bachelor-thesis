@@ -1,12 +1,13 @@
 \newpage
 \chapter{Theoretical Basis}
-In the first section, this chapter describes the concept of URL and how resources are searched and filtered using URL parameters. The second section describes the concept of a browser extension. Furthermore, the choice of implementation browser will is defined with which it is possible to develop an extension The third chapter covers the architecture of a Chrome Extension. Finally, the framework for the extension's UI implementation is elucidated.
+In the first section, this chapter describes the concept of URL and how resources are searched and filtered using URL parameters. The second section describes the concept of a browser extension. Furthermore, the choice of implementation browser is defined with which it is possible to develop an extension. The third chapter covers the architecture of a Chrome Extension. Finally, the framework for the extension's UI implementation is elucidated.
 
+% TODO: add the theory behind the problem that we want to solve by
+% creating the extension, which is, what is the problem of having
+% too many options?
 
 % Uniform Resource Locator
 \section{Uniform Resource Locator}
-
-\subsection{Definition}
 Uniform Resource Locator, or URL, is a compact string representation for a resource available via the Internet \autocite{berners1994uniform}. URLs are used to "locate" resources, by providing an abstract identification of the resource location. These resources could be an image, a CSS file, an HTML page, etc. In practice, there are a few exceptions, the most frequent of which is a URL leading to a resource that has either relocated or vanished. After locating a resource, a system may carry out a number of actions on it, which can be described by phrases like "access", "update", "replace", and "find attributes". For each URL scheme, only the "access" method needs to be supplied. Here is an example of an HTTP URL: \texttt{http://www.example.com/software/index.html}
 
 \subsection{Anatomy of a URL}
@@ -43,41 +44,34 @@ A query is commonly found in the URL of dynamic pages. and is represented by a q
 An anchor is a type of "bookmark" within the resource that instructs the browser to display the content located at that "bookmarked" location. For example, in an HTML document, the browser will scroll to the point where the anchor is defined; in a video or audio document, the browser will attempt to navigate to the time the anchor represents. It is important to note that the part following the \texttt{\#}, also known as the fragment identifier, is never sent to the server with the request.
 
 \subsection{Search and Filter URL Parameters}
-Search and filter URL parameters are parameters or query strings that add information to a specific URL. A search or filter parameter facilitates the search for a specific phrase or keyword within search engine results. They include what is requested while excluding irrelevant content. Aside from the functions mentioned above, the most common use cases for parameters are:
-\begin{itemize}
-  \item Tracking
-  \item Pagination
-  \item Site Search
-  \item Sorting
-  \item Filtering
-\end{itemize}
+Search and filter URL parameters are parameters or query strings that add information to a specific URL. A search or filter parameter facilitates the search for a specific phrase or keyword within search engine results. They include what is requested while excluding irrelevant content. Aside from the functions mentioned above, the most common use cases for parameters are tracking, pagination, site search, sorting and filtering.
 
-%Browser Extension Background
-\section{Browser Extension Background}
+%Site Search
+\section{Site Search}
+Providing a search function that searches your Web pages is a design strategy that offers users a way to find content \autocite{w3c2016search}. Users can find content by searching for specific words or phrases without having to understand or navigate the site's structure. This can be a faster or easier way to find content on large sites. A great site search function is specific to the website and not only constantly indexes the site to ensure the most recent content is easily accessible, but it also guides users as they explore a website's content, assisting them in discovering content they may not have known they were interested in. The best site search products delight users by allowing them to quickly connect with the content they require while also collecting valuable data about the content and products that visitors are most interested in.
 
-\subsection{Definition}
+
+%Filters
+\section{Filters}
+The process of narrowing down a search based on predefined categories is known as filtering. These categories are frequently broad and based on a single dimension of the product. This allows user to quickly narrow down a large number of products to a more manageable set for further investigation.
+
+Filters are broad categories defined by the business that do not change between searches, and they are frequently used behind the scenes. For example, an online clothing store might use "clothing type" as a filter, with four possible categories: shirts, pants, shoes, and accessories. When a website visitor clicks on "shirts" in the top navigation, the clothing type filter is applied, and the visitor sees only shirts on the results page.
+
+
+%Facets and faceted search
+\section{Facets and faceted search}
+Facets, also known as facet filters, enable users to filter results by selecting values along different dimensions or facets \autocite{qu2021study}. It is widely used in e-commerce search engines and digital libraries where documents have rich metadata. Faceted search is a more granular method of finding products and results in a specific, targeted way that broad, one-size-fits-all filters do not allow.
+
+Facets and faceted search are features of a well-designed user interface. Contextual facets that change depending on the item or category drive a user-friendly experience by guiding the user down the quickest path to the best result.
+
+
+%Browser Extension
+\section{Browser Extension}
 Browser extensions or addons are third party programs, that can extend the functionality of browsers and improve users' browsing experience \autocite{some2019empoweb}. A browser extension, as opposed to a standard web page, is created specifically for a given browser and uses that browser's extension API. It was necessary to choose a browser as a result. There are frameworks that try to make it feasible to create an extension for several different browsers at once. Although the caliber of these frameworks was unclear, it was decided that the expense of potential problems and additional time spent debugging in many browsers outweighed the benefits.
-
-\subsection{Choice of Implementation Browser}
-The selection of a browser was based on a number of factors. The first was the browser's usage rate. This is significant since anyone who doesn't already have the necessary browser will need to download and install it. Drop-outs due to the installation process or being unfamiliar with a new browser can significantly raise the cost of conducting the survey. The ease of use of the API and simplicity of implementation were additional crucial criteria. The extension programming process should ideally only need a basic understanding of the extension API. The capabilities of the API offered by the browser was another factor considered. The extension needs to:
-
-\begin{enumerate}
-  \item Store a big amount of data on the client side
-  \item Read URL - so query parameters can be passed to the extension
-  \item Modify URL - so frequently used query parameters can be utilized
-\end{enumerate}
-
-%TODO: update texts
-[outdated] Internet Explorer was the most challenging in terms of implementation simplicity. The features appeared to be restricted, and it needed knowledge of the COM. [8] After reviewing the documentation, it was still unclear how tasks like making HTTP queries or changing the DOM would be carried out. The instructions appears to be primarily concerned with optional features like adding menu items and explorer bars. Thus, IE was eliminated from the list, leaving Firefox and Chrome as the only options.
-
-  %TODO: update texts
-  [outdated] Both the Firefox and Chrome extension APIs had similar features. The fact that Firefox required knowing XUL (XML User Interface Language), Mozilla's XML-based language for creating application user interfaces, was one drawback. [9] Extensions for the Google Chrome browser can be created entirely in HTML, CSS, and JavaScript. The team members' familiarity with the languages and the simplicity of the solution were appealing. Additionally, it was discovered that the Chrome documentation was easy to grasp and was divided up into sections. Firefox's market share was roughly double that of Chrome. As a result, it was decided to develop a Google Chrome browser extension.
 
 
 %Chrome Extension Architecture
 \section{Chrome Extension Architecture}
-
-\subsection{Chrome Extension Basics}
 Extensions are built on web technologies such as HTML, JavaScript, and CSS. They run in a separate, sandboxed execution environment and interact with the Chrome browser \autocite{google2021what}. They also have access to the APIs that browsers provide for tasks like XMLHttpRequests and HTML5 features on web sites. The following files can be found in an extension:
 
 \begin{itemize}
@@ -88,14 +82,15 @@ Extensions are built on web technologies such as HTML, JavaScript, and CSS. They
 
 The majority of extensions have a background page that contains their primary logic and state. They frequently also contain content scripts that can communicate with websites. Asynchronous message passing is used to communicate between the background page and the content scripts. Additionally, extensions can save data via localStorage and other HTML5 storage APIs.
 
-\subsection{Manifest Files}
+\subsection*{Manifest Files}
 A manifest.json file is required for each extension. It includes crucial information about the extension, such its name, version, scripts used for its content, minimum Chrome version, and permissions. The content-scripts field was the most crucial one for this expansion. Each study and content-related webpage need its own content script. Each one was defined in the scripts column, which also mapped each one to the appropriate URLs.
 
-\subsection{Content Scripts}
+\subsection*{Content Scripts}
 Content scripts are JavaScript files that are used on websites to add new functionality. They have full control to modify the entire web page because they can directly access the DOM of these web sites. The content script is injected into a tab when the web page is loaded, and runs in the same process space of the renderer of the web tab and can thus access its DOM objects. Injected content scripts in a tab can only communicate with the extension core via Chrome's IPC \autocite{liu2012chrome}.
 
-\subsection{Service Worker}
+\subsection*{Service Worker}
 The Chrome extension platform switches from background pages to service workers in Manifest V3. A service worker is a script that your browser runs in the background, distinct from a web page, opening the door to features that don't need a web page or user input \autocite{chrome2021service}. This technology allows native-like experiences over the open web, including push notifications, robust offline support, background synchronization, and "Add to Home Screen." Service providers drew some of their inspiration from the background pages in Chrome Extensions, but improvements were added for the web.
+
 Service workers are specialized JavaScript assets that act as proxies between web browsers and web servers. They aim to improve reliability by providing offline access, as well as boost page performance \autocite{chrome2021service}. Websites are gradually improved by service workers through a lifetime akin to that of platform-specific programs.
 
 
@@ -103,21 +98,23 @@ Service workers are specialized JavaScript assets that act as proxies between we
 \section{React}
 React is a product of Facebook's engineering team, which is a JavaScript framework for creating user interfaces \autocite{gackenheimer2015introducing}. Because of its simplicity and straightforward but efficient development process, React is quite well-liked in the developer communities. Interactive user interfaces are simpler to develop with React. It effectively updates by accurately drawing each state's view's constituent parts, and it updates the application's data \autocite{islam2017reactjs}. The core objective of React is to provide the best possible rendering performance. Its strength comes from the focus on individual components. Using reusable components, it is found to be easy development for developers to design rich UI's. React incorporates with View part from MVC model \autocite{maratkar2021re}. React implements One Way dataflow so that it gets easier than traditional data binding. React uses virtual DOM it offers not so complex programming with faster execution. It makes use of composition to create intricate user interfaces out of simple building blocks known as Components \autocite{david2020building}.
 
-\subsection{Component}
+\subsection*{Component}
 Each component has a render method, which can either return HTML or another React component, and returns a description of what to render. A combination of HTML and Javascript known as JSX is used to describe what should be rendered. A more detailed explanation of JSX is included in the JSX section. It is possible to specify a component as a class or a function. Props and state are crucial components when creating React applications.
 
-\subsection{States and props}
+\subsection*{States and props}
 The state of a component allows it to "remember" things, and it can change in response to user interaction or other application-wide actions. The State is optional; components without a state are referred to as presentational components. Components with a state are referred to as stateful components.
+
 Immutable data supplied into a component during development is known as props, or properties. Because a component can function and seem differently depending on the properties supplied into it, props enable React components to be flexible and reusable.
+
 Using props, data moves down the component tree in React. Callback functions are supplied as props so that a child component can communicate with its parent. Callback methods and other data must be passed down numerous layers in large React apps due to the component tree's depth. Props-drilling is a technique that results in tightly connected components and a less maintainable program. This is one of the reasons why complex React apps require architectural patterns.
 
-\subsection{Class-based components}
+\subsection*{Class-based components}
 A class-based Component is created by extending the React.Component class. The state of a class-based component is updated using the method setState() and read by using this.state within the class. Using the setState() method makes the component re-render which is not the case when mutating the state directly. Class-based components include life-cycle methods that can be used to create more complex behavior. It also requires a render method to return JSX elements.
 
-\subsection{Life-cycle methods}
+\subsection*{Life-cycle methods}
 Life-cycle methods are built-in functions that are called whenever a state or prop updates, a component renders, is destroyed, or both.
 
-\subsection{Function components}
+\subsection*{Function components}
 A pure function that takes props as input and outputs a JSX element is referred to as a function component. React Hooks are used to give the function component the same access to state and life-cycle methods as class-based components. In compared to class-based components, using function components with hooks might make React applications smaller and more manageable. There are a couple reasons why function component is preverable \autocite{phan2020react}:
 
 \begin{itemize}
@@ -126,21 +123,24 @@ A pure function that takes props as input and outputs a JSX element is referred 
   \item There is no need to consider how to divide the component into a container and a standard UI component when utilizing a function component.
 \end{itemize}
 
-\subsection{React Hooks}
+\subsection*{React Hooks}
 For more complex function components, React Hooks are utilized; they "hook onto" React capabilities. React hook names begin with the word "use," per tradition. By default, state is absent from function component; however, the useState React hook can be used to keep state for the duration of the component. All hooks, including the useState one, are repeatable inside a single component.
+
 Function components do not come with built-in life-cycle methods, but they can be added using the useEffect hook. By default, the useEffect hook will run a function for each time the component is re-rendered, but it may be modified to just run for specific modifications.
+
 The useContext hook, which will be described in the Context API section, is another React hook. In addition to built-in hooks, custom hooks can be made, allowing functionality to be reused throughout components.
 
-\subsection{Virtual DOM}
+\subsection*{Virtual DOM}
 For all components in the application, React generates a new View based on immutable states and props; a change to either a state or a prop causes the View to be re-rendered. The Views are now predictable and testable as a result. The user experience is negatively impacted by the time-consuming process of re-rendering views by swapping out the DOM for a new version, which also causes scrolling position and input information to be lost. Using a Virtual DOM, React provides a solution for this \autocite{david2020building}.
+
 By establishing a new Virtual DOM subtree when data in the application changes and comparing it to the previous one, the Virtual DOM re-renders Views that need to update in an affordable manner without disrupting other DOM nodes. React determines the minimal number of DOM alterations required to match the virtual DOM with the real DOM. Javascript is used to do DOM manipulations, which are then queued up and executed in batches to save time. React takes care of manipulating the DOM to get to the various states, while developers utilize JSX to define how components should render in various states.
 
-\subsection{Context API}
+\subsection*{Context API}
 The Context API is a built-in tool that allows data to be shared between React components without the need for props-drilling. The createContext method in the React library is used to initialize a Context, which can be used by several components in the component tree. A Provider present on the Context instance is used to add data to the Context and make it accessible to children components. The data for the Context is specified in the Provider, a component that has a single property named value and accepts variables, functions, or objects as values. The Context data can be retrieved from any child component using a Consumer that is also available on the Context instance by enclosing children components inside the Provider component. The application uses a variety of contexts for various purposes rather than being restricted to a single instance.
+
 Context API's callback function inheritance allows a child component to change the state of a parent component. Context is used, according to the official documentation, to exchange information that is regarded as global for the tree of React components, such as whether a user is logged in, the application's theme, or the language preferences. Because they depend on information provided by context from another component, using context may reduce the reusability of components. UseContext functions as the Consumer and grants access to the data for a functional component encased in a Context Provider.
 
-\subsection{JSX}
+\subsection*{JSX}
 A React extension called JSX makes it simple for web designers to change the DOM using straightforward HTML-style code. Additionally, as all current web browsers are supported by React JS, JSX is interoperable with any browser platform.
+
 Most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages \autocite{react2020introducing}. The advantages of JSX include the fact that it makes writing templates for users who are familiar with HTML simpler and faster. Performance improves when code is compiled into JavaScript \autocite{phan2020react}.
-
-
