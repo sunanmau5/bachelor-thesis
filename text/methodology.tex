@@ -30,21 +30,22 @@ A requirement is called non-functional if its underlying need is a non-objective
   \item NFR-05: Modularization must be taken into consideration throughout development so that individual modules and/or components can be easily reused, expanded or changed.
 \end{itemize}
 
+While functional requirements are perceived as such by the user, non-functional requirements are implementation details that remain largely hidden from the user.
+
 \section{Design Concept}
 % TODO:
-\begin{itemize}
-  \item The initial purpose of the extension's development was to be an addition to marta's user application.
-  \item What is the strategy? How did I solve the problem?
-  \item But why should it be an extension?
-        \begin{itemize}
-          \item Individuality, give user the option to use or not to use
-          \item Separate code
-          \item Search and Filter is a general concept, by creating an extension it could be useful for users other than marta's customers
-        \end{itemize}
-  \item Implementation decisions, why use chrome.storage, why use react
-  \item Introduce the simple software architecture
-  \item Introduce the frontend react architecture
-\end{itemize}
+The original concept of this thesis is to create an additional feature for marta's customer-facing platforms. Marta as a business is currently best described as a marketplace between caregivers and families requiring 24-hour care. 24-hour care can be defined as living in a household with the person in need of care for a certain period of time. This means that caregivers are primarily responsible for basic care and household chores. In addition, they support the person in care's relatives in need of assistance in carrying out the activities they wish to do. Marta as a marketplace connecting families with caregivers is competing against more traditional agencies, where it can take several days or even weeks to find a family for a newly signed up caregiver or the other way around.
+
+As a growing start-up that gained a lot of users in the past few months, marta would need to enhance their product, to compete in this expeditiously developing business. One way marta can provide a superior experience for both caregivers and families is to speed up the matching process between both parties. The caregiver and family inquiry forms are designed to record as much information as possible which can be used during the matching phase. The matches are then created by the teams in Berlin and Romania. To make the job more seamless, the technical team in marta introduced a "matching score" by which possible matches are sorted. As a result, a number of caregiver profiles with high matching scores are shown to the family. Filter functionality is provided to speed up the search process. This includes caregiver's earliest starting date, German skills, experience with diseases, etc.
+
+Marta needs to introduce a continually improved, user-friendly filtering functionality to adjust to the needs of their users. An example of a user-friendly filter would be to provide quick filter suggestions which the user can click once and the desired results will be shown, instead of letting users select the same filter manually over and over again. In order to determine which filter suggestions are the most beneficial, frequently used filters need to be identified.
+
+\subsection{Early Concept}
+A question arose within this world of thought about how to improve the existing filtering functionality for a better user experience. An early concept was to create quick filters within the application that suggested to users which filters they frequently used. For example, if a family is looking for a caregiver with German speaking capability level 3, the German filter would be activated. Each filter usage will be counted and saved to a relational database. The three most frequently used filters will be displayed as quick filters for all users, and the user will only need to click on those quick filters to activate them. Not only that, the user can also combine those quick filters to narrow the search even further.
+
+The first problem with this idea was that it collected filter usage data from every user and stored it without providing any detailed information about who used the filter and when it was used. Each family's search criteria are unique. Hence the first idea would not be as beneficial to the users. We must also keep in mind that this approach will only benefit those who actively use the platform. The second concern was that if the filter recommendations were tailored to each individual user, the amount of data maintained would rapidly grow to be rather large. It would be a waste of storage space and would not be sustainable, especially if the number of filters and users grows. We would develop quick filters not only on one page, but on several. And each would require the same amount of storage space.
+
+The concept was then expanded upon and a decision was reached. Instead of adding those quick filters directly into the platform, an extension that allows for even more personalized filter suggestions should be developed. The aforementioned issues can be addressed by developing an extension. The information that will be saved varies for each user and is saved in the end user's browser, which means that other users' activity will not impact the filter suggestions. Furthermore, search and filter is a popular website design method. It would benefit not just Marta's platform, but also other e-commerce websites like Lacoste, Nike, Adidas, and others. Moving it to an extension would allow people to choose whether or not to install it. And, because this is a separate capability with a different software architecture than Marta's primary platform, a new repository or codebase is developed to make it easier to distinguish and manage.
 
 \subsection{Choice of Implementation Browser}
 The selection of a browser was based on a number of factors. The first was the browser's usage rate. This is significant since anyone who doesn't already have the necessary browser will need to download and install it. Drop-outs due to the installation process or being unfamiliar with a new browser can significantly raise the cost of conducting the survey. The ease of use of the API and simplicity of implementation were additional crucial criteria. The extension programming process should ideally only need a basic understanding of the extension API. The capabilities of the API offered by the browser was another factor considered. The extension needs to:
@@ -52,6 +53,7 @@ The selection of a browser was based on a number of factors. The first was the b
 \begin{enumerate}
   \item Store a big amount of data on the client side
   \item Read URL - so query parameters can be passed to the extension
+  \item Modify URL - so frequently used query parameters can be utilized
   \item Modify URL - so frequently used query parameters can be utilized
 \end{enumerate}
 
@@ -61,6 +63,13 @@ The selection of a browser was based on a number of factors. The first was the b
 %TODO: update texts
 \textbf{[outdated]} Both the Firefox and Chrome extension APIs had similar features. The fact that Firefox required knowing XUL (XML User Interface Language), Mozilla's XML-based language for creating application user interfaces, was one drawback. [9] Extensions for the Google Chrome browser can be created entirely in HTML, CSS, and JavaScript. The team members' familiarity with the languages and the simplicity of the solution were appealing. Additionally, it was discovered that the Chrome documentation was easy to grasp and was divided up into sections. Firefox's market share was roughly double that of Chrome. As a result, it was decided to develop a Google Chrome browser extension.
 
+\subsection{Implementation Decisions}
+
+\begin{itemize}
+  \item Implementation decisions, why use chrome.storage, why use react
+  \item Introduce the simple software architecture
+  \item Introduce the frontend react architecture
+\end{itemize}
 
 \section{Project Implementation}
 % TODO:
