@@ -2,36 +2,6 @@
 \chapter{Methodology}
 In the following chapter, the component analysis is defined first. This results in the requirements that must be considered in the design when implementing the extension, which is then discussed in the third section. In the final section, the tests, to ensure that the extension matches the expected requirements and it is defect free, are described.
 
-\section{Requirements Elicitation and Analysis}
-The extension is used to improve the user's experience when navigating through an e-commerce website to search for a wanted product or service. The idea is to integrate the end user's browser with an extension, which will record the host name or domain of the visited website's URL along with the respective parameters. When enough records have been collected, the extension will display a list of parameters for the visited domain. Path parameters and query parameters will be separated from these parameters. The user can then navigate through the path parameters in the same way that they would navigate through a file system. When the last path parameter is reached, the query parameters and the number of times these parameters are called in the URL are displayed. Below the list is an input field and a button; these input fields will be filled based on and while navigating through the selected parameters. When the "Navigate" button is clicked, a new tab will open with the full-path built URL.
-
-These prerequisites and considerations result in the following requirements for the extension, which is to be developed within the scope of this thesis. These requirements are classified into functional and non-functional requirements.
-
-\subsection{Functional Requirements}
-A requirement is called functional if its underlying need is functional, i.e., it relates to information processing objects (data, operations, behavior). In other words, functional requirements are statements of services the system should provide, how the system should react to particular inputs and how the system should behave in particular situations \autocite{sommerville2011software}. The following functional requirements are defined for the extension:
-
-\begin{itemize}
-  \item FR-01: User can see how many times each query parameters for each host name are used
-  \item FR-02: User can build a URL query string based on their history
-  \item FR-03: User can navigate to the URL with the built query string
-\end{itemize}
-
-In addition to functional requirements, non-functional requirements are also defined as follows.
-
-\subsection{Non-Functional Requirements}
-A requirement is called non-functional if its underlying need is a non-objective property. In other words non-functional requirementes are constraints on the services or functions offered by the system such as timing constraints, constraints on the development process, standards, etc \autocite{sommerville2011software}. It often apply to the system as a whole rather than individual features or services. The following non-functional requirements arise for the extension to be developed:
-
-\begin{itemize}
-  \item NFR-01: UI components must be implemented using React.
-  \item NFR-02: TypeScript must be used to implement dynamic functions.
-  \item NFR-02: Data must be saved on the end-user's Chrome storage.
-  \item NFR-03: Both the external components used and the developed component itself must be well documented.
-  \item NFR-04: The individual external libraries must be easy to update.
-  \item NFR-05: Modularization must be taken into consideration throughout development so that individual modules and/or components can be easily reused, expanded or changed.
-\end{itemize}
-
-While functional requirements are perceived as such by the user, non-functional requirements are implementation details that remain largely hidden from the user.
-
 \section{Design Concept}
 The original concept of this thesis is to create an additional feature for marta's customer-facing platforms. Marta as a business is currently best described as a marketplace between caregivers and families requiring 24-hour care. 24-hour care can be defined as living in a household with the person in need of care for a certain period of time. This means that caregivers are primarily responsible for basic care and household chores. In addition, they support the person in care's relatives in need of assistance in carrying out the activities they wish to do. Marta as a marketplace connecting families with caregivers is competing against more traditional agencies, where it can take several days or even weeks to find a family for a newly signed up caregiver or the other way around.
 
@@ -45,35 +15,41 @@ The first problem with this idea was that it collected filter usage data from ev
 
 The concept was then expanded upon and a decision was reached. Instead of adding those quick filters directly into the platform, an extension that allows for even more personalized filter suggestions should be developed. The aforementioned issues can be addressed by developing an extension. The information that will be saved varies for each user and is saved in the end user's browser, which means that other users' activity will not impact the filter suggestions. Furthermore, search and filter is a popular website design method. It would benefit not just Marta's platform, but also other e-commerce websites like Lacoste, Nike, Adidas, and others. Moving it to an extension would allow people to choose whether or not to install it. And, because this is a separate capability with a different software architecture than Marta's primary platform, a new repository or codebase is developed to make it easier to distinguish and manage.
 
-\section{Technologies}
-\label{technologies_used}
+\section{Requirements Elicitation and Analysis}
+\label{requirements_analysis}
+The extension is used to improve the user's experience when navigating through an e-commerce website to search for a wanted product or service. The idea is to integrate the end user's browser with an extension, which will record the host name or domain of the visited website's URL along with the respective parameters. When enough records have been collected, the extension will display a list of parameters for the visited domain. Path parameters and query parameters will be separated from these parameters. The user can then navigate through the path parameters in the same way that they would navigate through a file system. When the last path parameter is reached, the query parameters and the number of times these parameters are called in the URL are displayed. Below the list is an input field and a button; these input fields will be filled based on and while navigating through the selected parameters. When the "Navigate" button is clicked, a new tab will open with the full-path built URL.
 
-%Browser Extension
-\subsection{Browser Extension}
-Browser extensions or addons are third party programs, that can extend the functionality of browsers and improve users' browsing experience \autocite{some2019empoweb}. A browser extension, as opposed to a standard web page, is created specifically for a given browser and uses that browser's extension API. It was necessary to choose a browser as a result. There are frameworks that try to make it feasible to create an extension for several different browsers at once. Although the caliber of these frameworks was unclear, it was decided that the expense of potential problems and additional time spent debugging in many browsers outweighed the benefits.
+These prerequisites and considerations result in the following requirements for the extension, which is to be developed within the scope of this thesis. These requirements are classified into functional and non-functional requirements.
 
-%Chrome Extension Architecture
-\subsection{Chrome Extension Architecture}
-Extensions are built on web technologies such as HTML, JavaScript, and CSS. They run in a separate, sandboxed execution environment and interact with the Chrome browser \autocite{google2021what}. They also have access to the APIs that browsers provide for tasks like XMLHttpRequests and HTML5 features on web sites. The following files can be found in an extension:
+\subsection{Functional Requirements}
+A requirement is called functional if its underlying need is functional, i.e., it relates to information processing objects (data, operations, behavior). In other words, functional requirements are statements of services the system should provide, how the system should react to particular inputs and how the system should behave in particular situations \autocite{sommerville2011software}. The following functional requirements are defined for the extension:
 
 \begin{itemize}
-  \item A manifest.json file
-  \item One or more HTML files
-  \item Any other files such as CSS or JavaScript needed by the extension to run
+  \item User can see how many times each query parameters for each hostname are used
+  \item User can build a URL query string based on their history
+  \item User can navigate to the URL with the assembled query string
+  \item The extension saves the hostname, pathname and query parameters of the URL
+  \item The extension stores the URL attributes each time a page is loaded
 \end{itemize}
 
-The majority of extensions have a background page that contains their primary logic and state. They frequently also contain content scripts that can communicate with websites. Asynchronous message passing is used to communicate between the background page and the content scripts. Additionally, extensions can save data via localStorage and other HTML5 storage APIs.
+In addition to functional requirements, non-functional requirements are also defined as follows.
 
-\subsection*{Manifest Files}
-A manifest.json file is required for each extension. It includes crucial information about the extension, such its name, version, scripts used for its content, minimum Chrome version, and permissions. The content-scripts field was the most crucial one for this expansion. Each study and content-related webpage need its own content script. Each one was defined in the scripts column, which also mapped each one to the appropriate URLs.
+\subsection{Non-Functional Requirements}
+A requirement is called non-functional if its underlying need is a non-objective property. In other words non-functional requirementes are constraints on the services or functions offered by the system such as timing constraints, constraints on the development process, standards, etc \autocite{sommerville2011software}. It often apply to the system as a whole rather than individual features or services. The following non-functional requirements arise for the extension to be developed:
 
-\subsection*{Content Scripts}
-Content scripts are JavaScript files that are used on websites to add new functionality. They have full control to modify the entire web page because they can directly access the DOM of these web sites. The content script is injected into a tab when the web page is loaded, and runs in the same process space of the renderer of the web tab and can thus access its DOM objects. Injected content scripts in a tab can only communicate with the extension core via Chrome's IPC \autocite{liu2012chrome}.
+\begin{itemize}
+  \item UI components must be implemented using React.
+  \item TypeScript must be used to implement dynamic functions.
+  \item Data must be saved on the end-user's Chrome storage.
+  \item Both the external components used and the developed component itself must be well documented.
+  \item The individual external libraries must be easy to update.
+  \item Modularization must be taken into consideration throughout development so that individual modules and/or components can be easily reused, expanded or changed.
+\end{itemize}
 
-\subsection*{Service Worker}
-The Chrome extension platform switches from background pages to service workers in Manifest V3. A service worker is a script that your browser runs in the background, distinct from a web page, opening the door to features that don't need a web page or user input \autocite{chrome2021service}. This technology allows native-like experiences over the open web, including push notifications, robust offline support, background synchronization, and "Add to Home Screen." Service providers drew some of their inspiration from the background pages in Chrome Extensions, but improvements were added for the web.
+While functional requirements are perceived as such by the user, non-functional requirements are implementation details that remain largely hidden from the user.
 
-Service workers are specialized JavaScript assets that act as proxies between web browsers and web servers. They aim to improve reliability by providing offline access, as well as boost page performance \autocite{chrome2021service}. Websites are gradually improved by service workers through a lifetime akin to that of platform-specific programs.
+\section{Technologies}
+\label{technologies_used}
 
 \subsection{Choice of Implementation Browser}
 The selection of a browser was based on a number of factors. The first was the browser's usage rate. This is significant since anyone who doesn't already have the necessary browser will need to download and install it. Drop-outs due to the installation process or being unfamiliar with a new browser can significantly raise the cost of conducting the survey. The ease of use of the API and simplicity of implementation were additional crucial criteria. The extension programming process should ideally only need a basic understanding of the extension API. The capabilities of the API offered by the browser was another factor considered. The extension needs to:
@@ -98,54 +74,59 @@ Both the Firefox and Chrome extension APIs provided comparable functionality. To
 
 Additionally, it was discovered that the Chrome documentation was easy to grasp and was divided up into sections. Chrome also has an overwhelming market share: over two-thirds of all users globally use Chrome as their browser (See Figure ~\ref{fig:browserMarketShareChart}). As a result, it was decided to develop a Chrome-based browser extension.
 
-%React
-\subsection{React}
-\label{react}
-React is a product of Facebook's engineering team, which is a JavaScript framework for creating user interfaces \autocite{gackenheimer2015introducing}. Because of its simplicity and straightforward but efficient development process, React is quite well-liked in the developer communities. Interactive user interfaces are simpler to develop with React. It effectively updates by accurately drawing each state's view's constituent parts, and it updates the application's data \autocite{islam2017reactjs}. The core objective of React is to provide the best possible rendering performance. Its strength comes from the focus on individual components. Using reusable components, it is found to be easy development for developers to design rich UI's. React incorporates with View part from MVC model \autocite{maratkar2021re}. React implements One Way dataflow so that it gets easier than traditional data binding. React uses virtual DOM it offers not so complex programming with faster execution. It makes use of composition to create intricate user interfaces out of simple building blocks known as Components \autocite{david2020building}.
-
-\subsection*{Component}
-Each component has a render method, which can either return HTML or another React component, and returns a description of what to render. A combination of HTML and Javascript known as JSX is used to describe what should be rendered. A more detailed explanation of JSX is included in the JSX section. It is possible to specify a component as a class or a function. Props and state are crucial components when creating React applications.
-
-\subsection*{States and props}
-The state of a component allows it to "remember" things, and it can change in response to user interaction or other application-wide actions. The State is optional; components without a state are referred to as presentational components. Components with a state are referred to as stateful components.
-
-Immutable data supplied into a component during development is known as props, or properties. Because a component can function and seem differently depending on the properties supplied into it, props enable React components to be flexible and reusable.
-
-Using props, data moves down the component tree in React. Callback functions are supplied as props so that a child component can communicate with its parent. Callback methods and other data must be passed down numerous layers in large React apps due to the component tree's depth. Props-drilling is a technique that results in tightly connected components and a less maintainable program. This is one of the reasons why complex React apps require architectural patterns.
-
-\subsection*{Class-based components}
-A class-based Component is created by extending the React.Component class. The state of a class-based component is updated using the method setState() and read by using this.state within the class. Using the setState() method makes the component re-render which is not the case when mutating the state directly. Class-based components include life-cycle methods that can be used to create more complex behavior. It also requires a render method to return JSX elements.
-
-\subsection*{Life-cycle methods}
-Life-cycle methods are built-in functions that are called whenever a state or prop updates, a component renders, is destroyed, or both.
-
-\subsection*{Function components}
-A pure function that takes props as input and outputs a JSX element is referred to as a function component. React Hooks are used to give the function component the same access to state and life-cycle methods as class-based components. In compared to class-based components, using function components with hooks might make React applications smaller and more manageable. There are a couple reasons why function component is preverable \autocite{phan2020react}:
+\subsection{Data storage}
+Extensions can store data in two places: (1) on the web server or (2) on the web client (the end-user's-computer). Certain data types belong on one, while others perform better on the other. Sensitive and fragile data, for example, should always be stored on the server, whereas static data and user preferences can be stored on the client \autocite{macdonald2013html5}. Currently, most organizations manage various data aspects through various record systems. They have difficulty locating appropriate data stores because they report on each data source separately, resulting in complex data analytics processing. For this project, the types of data that must be stored are specified in \autoref{requirements_analysis}. Since no servers are needed for this project, data is stored and manipulated in the browser --- also known as client-side-storage. Examples of data storage and manipulation scenarios in the browser include:
 
 \begin{itemize}
-  \item Faster development, easier to read and test, debug and reusable; because function components do not have state and life-cycle-hook. Function component is a straightforward JavaScript function.
-  \item Performance will be improved since function components are smaller and compiles more quickly than class components.
-  \item There is no need to consider how to divide the component into a container and a standard UI component when utilizing a function component.
+  \item Preserving the state of a client-side application, such as the current screen, entered data, user preferences, and so on.
+  \item Utilities that access local data or files and have strict privacy requirements.
+  \item Offline progressive web apps (PWAs)
 \end{itemize}
 
-\subsection*{React Hooks}
-For more complex function components, React Hooks are utilized; they "hook onto" React capabilities. React hook names begin with the word "use," per tradition. By default, state is absent from function component; however, the useState React hook can be used to keep state for the duration of the component. All hooks, including the useState one, are repeatable inside a single component.
+\subsection*{Cookies}
+HTTP cookies, or simply cookies, were designed to store session information on the client. As part of any response to an HTTP request, the server was required to send a Set-Cookie HTTP header containing session information, according to the specification. A server response's headers, for example, might look like this:
 
-Function components do not come with built-in life-cycle methods, but they can be added using the useEffect hook. By default, the useEffect hook will run a function for each time the component is re-rendered, but it may be modified to just run for specific modifications.
+\begin{lstlisting}[language={}]
+  HTTP/1.1 200 OK
+  Content-type: text/html
+  Set-Cookie: name=value
+  Other-header: other-header-value
+\end{lstlisting}
 
-The useContext hook, which will be described in the Context API section, is another React hook. In addition to built-in hooks, custom hooks can be made, allowing functionality to be reused throughout components.
+This HTTP response creates a cookie called "name" with the value "value." When sent, both the name and the value are URL-encoded. Browsers save such session information and send it back to the server via the Cookie HTTP header for each subsequent request, as shown below:
 
-\subsection*{Virtual DOM}
-For all components in the application, React generates a new View based on immutable states and props; a change to either a state or a prop causes the View to be re-rendered. The Views are now predictable and testable as a result. The user experience is negatively impacted by the time-consuming process of re-rendering views by swapping out the DOM for a new version, which also causes scrolling position and input information to be lost. Using a Virtual DOM, React provides a solution for this \autocite{david2020building}.
+\begin{lstlisting}[language={}]
+  GET /index.jsl HTTP/1.1
+  Cookie: name=value
+  Other-header: other-header-value
+\end{lstlisting}
 
-By establishing a new Virtual DOM subtree when data in the application changes and comparing it to the previous one, the Virtual DOM re-renders Views that need to update in an affordable manner without disrupting other DOM nodes. React determines the minimal number of DOM alterations required to match the virtual DOM with the real DOM. Javascript is used to do DOM manipulations, which are then queued up and executed in batches to save time. React takes care of manipulating the DOM to get to the various states, while developers utilize JSX to define how components should render in various states.
+This additional data returned to the server can be used to uniquely identify the client from which the request was sent. Although cookies provide a simple and well-supported storage mechanism, they have a number of drawbacks. To begin, each cookie is sent back and forth with each HTTP request (via HTTP headers), adding a significant amount of unnecessary overhead. Second, their storage capacity is far insufficient for modern web applications. Third, the same web application that uses cookies cannot run in multiple web browser tabs at the same time. Finally, the API is somewhat clumsy \autocite{kessin2011programming, macdonald2013html5}.
 
-\subsection*{Context API}
-The Context API is a built-in tool that allows data to be shared between React components without the need for props-drilling. The createContext method in the React library is used to initialize a Context, which can be used by several components in the component tree. A Provider present on the Context instance is used to add data to the Context and make it accessible to children components. The data for the Context is specified in the Provider, a component that has a single property named value and accepts variables, functions, or objects as values. The Context data can be retrieved from any child component using a Consumer that is also available on the Context instance by enclosing children components inside the Provider component. The application uses a variety of contexts for various purposes rather than being restricted to a single instance.
+\subsection*{Web Storage}
+The Web Applications 1.0 specification of the Web Hypertext Application Technical Working Group (WHAT-WG) was the first to address web storage. This specification's early development became part of HTML5 before being broken off into its own specification. Its goal is to circumvent some of the constraints imposed by cookies when data is required solely on the client side, without the need to send data back to the server on a constant basis. The Web Storage specification's most recent revision is the second edition. The Web Storage specification's two key goals are to provide a system for storing large amounts of data that survives between sessions and to provide a way to store session data outside of cookies \autocite{frisbie2019professional}.
 
-Context API's callback function inheritance allows a child component to change the state of a parent component. Context is used, according to the official documentation, to exchange information that is regarded as global for the tree of React components, such as whether a user is logged in, the application's theme, or the language preferences. Because they depend on information provided by context from another component, using context may reduce the reusability of components. UseContext functions as the Consumer and grants access to the data for a functional component encased in a Context Provider.
+The Web Storage specification's second edition comprises definitions for two objects: \verb;localStorage;, the permanent storage mechanism, and \verb;sessionStorage;, the session-scoped storage mechanism. The \verb;localStorage; object is kept until it is explicitly erased via JavaScript or until the user clears the browser's cache. Data from \verb;localStorage; will be retained even after page reloads, closing windows and tabs, and restarting the browser. On the other hand, the \verb;sessionStorage; object only keeps data for a single session, which means the data is kept until the browser is closed. This is similar to a session cookie, which is deleted when the browser is closed. Data stored on \verb;sessionStorage; endures through page refreshes and, depending on the browser vendor, may also be available if the browser crashes and is restarted. Both of these browser storage APIs provide two distinct methods for saving data in the browser that can withstand a page reload. Both \verb;localStorage; and \verb;sessionStorage; are available as window properties in all major vendor browser releases since 2009.
 
-\subsection*{JSX}
-A React extension called JSX makes it simple for web designers to change the DOM using straightforward HTML-style code. Additionally, as all current web browsers are supported by React JS, JSX is interoperable with any browser platform.
+Web Storage, like other client-side data storage solutions, has limitations. These are browser-specific restrictions. In general, the client-side data size limit is set per origin (protocol, domain, and port), so each origin has a fixed amount of space to store its data. This restriction is enforced by analyzing the origin of the page that is storing the data. Aside from that, Web Storage operates synchronously and will block the main thread. Furthermore, it is inaccessible to web workers or service workers and can only contain strings.
 
-Most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages \autocite{react2020introducing}. The advantages of JSX include the fact that it makes writing templates for users who are familiar with HTML simpler and faster. Performance improves when code is compiled into JavaScript \autocite{phan2020react}.
+\subsection*{IndexedDB}
+The Indexed Database API, abbreviated IndexedDB, is a structured data store in the browser. IndexedDB was created as a replacement for the now-deprecated Web SQL Database API. The goal of IndexedDB was to create an API that allowed for the simple storage and retrieval of JavaScript objects while also allowing for querying and searching. IndexedDB is intended to be almost entirely asynchronous. As a result, the majority of operations are performed as requests that will be executed later and produce either a successful or an error result. To determine the outcome of nearly every IndexedDB operation, you must attach \verb;onerror; and \verb;onsuccess; event handlers.
+
+It is an asynchronous, key-value browser-based NoSQL (Not Only SQL) data store. NoSQL is a database approach that is not relational or object oriented. Rather, NoSQL stores data in key/value format. Furthermore, the database can handle a large amount of data and has an API that provides quick access to an unlimited amount of structured data. However, IndexedDB may be considered insecure because security was not a consideration in its design.
+
+IndexedDB has been eliminated from the list for the same reason that Web Storage has been removed. First, IndexedDB databases are tied to the page's origin (protocol, domain, and port), so information cannot be shared across domains. This means that \url{www.wrox.com} and \url{p2p.wrox.com} have their own data stores. Second, IndexedDB is extremely slow, even slower than a database on a low-cost server. Inserting hundreds of documents can take several seconds. Time is important for a quick page load. Even sending data to the backend over the internet can be faster than storing it in an IndexedDB database. Third, a workaround is required for IndexedDB to function alongside the Chrome extension. IndexedDB is a low level API that requires significant setup before use, which can be particularly painful for storing simple data. Unlike most modern promise-based APIs, it is event based. Promise wrappers like \emph{idb}\footnote{\emph{idb} is a tiny library that mostly mirrors the IndexedDB API, but with small improvements that make a big difference to usability. GitHub repository: \url{https://github.com/jakearchibald/idb}} for IndexedDB hide some of the powerful features but more importantly, hide the complex machinery (e.g. transactions, schema versioning) that comes with the IndexedDB library.
+
+\subsection*{Chrome Storage API}
+This API has been optimized to meet the specific storage needs of extensions \autocite{chrome2021storage}. It has the same storage capabilities as the \verb;localStorage; API, with the following important differences:
+
+\begin{itemize}
+  \item Using \verb;storage.sync; user data can be automatically synced.
+  \item Without the need for a background page, the extension's content scripts can directly access user data.
+  \item Even when using split incognito behavior, a user's extension settings can be saved.
+  \item It is faster than the blocking and serial \verb;localStorage; APIs because it is asynchronous with bulk read and write operations.
+  \item Objects can be used to store user data (the \verb;localStorage; API stores data in strings).
+  \item The administrator's enterprise policies for the extension can be read (using \verb;storage.managed; with a schema).
+\end{itemize}
+
+Using \verb;chrome.storage; can alleviate the aforementioned limitations with other client-side data storage solutions. Chrome Storage API is well-documented, simple, and takes very little time to set up. Data stored in chrome.storage can be accessed not only from tabs and windows of the same origin. The maximum amount of data that can be stored in local storage is 5MB, as measured by the JSON stringification of each value plus the length of each key. However, this value can be ignored if \verb;unlimitedStorage;\footnote{This permission applies only to Web SQL Database and application cache (see issue \url{https://bugs.chromium.org/p/chromium/issues/detail?id=58985}). Also, it doesn't currently work with wildcard subdomains such as \url{http://*.example.com}.} permission is used.
