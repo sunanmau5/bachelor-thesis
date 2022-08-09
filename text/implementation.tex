@@ -77,13 +77,10 @@ This section goes over the data storage used for the project.
   \item Introduce the simple software architecture
   \item Introduce the frontend react architecture
 \end{itemize}
-\begin{itemize}
-  \item Installation
-  \item Application
-\end{itemize}
 
 \section{Test}
 % TODO:
+To ensure that the \verb;chrome.storage; is tested, the unit tests must run within the context of a Chrome Extension. Furthermore, this allows for more thorough testing of the extension's individual components. Due to the increasing complexity, the use of a mocking framework for data simulation was omitted. For the tests, a configuration object is used instead. Because it allows for modular development and is widely used, Jest will be used as the test framework.
 \begin{itemize}
   \item What kind of test? Unit testing, integration testing or functional testing?
   \item Short explanation on types of test
@@ -91,3 +88,74 @@ This section goes over the data storage used for the project.
   \item Which test libraries are being used?
   \item What are the assertions?
 \end{itemize}
+
+\section{Installation}
+% TODO:
+When a Chrome extension is installed, a manifest file is read, which acts as a contract between the extension and the browser. In addition to trivial data such as the extension's name, the runtime permissions are defined (\textit{permissions}). Furthermore, the functions that are to be triggered after events occur are registered with the help of so-called service workers (\textit{background}). Furthermore, an options page or configuration page (\textit{options\_page}) can be defined.
+\begin{lstlisting}[caption={manifest.json}, language=json]
+{
+  "name": "Filtre Extension",
+  "description": "Filtre Chrome Extension",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Filtre Extension",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["storage", "tabs", "unlimitedStorage"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+\end{lstlisting}
+
+\section{Application}
+% TODO:
+\begin{lstlisting}[style=ES6, caption={background/index.ts}]
+import { setStoredFilters } from '../utils/storage'
+
+chrome.runtime.onInstalled.addListener(() => {
+  setStoredFilters({})
+})
+\end{lstlisting}
+
+\begin{lstlisting}[style=ES6, caption={TypeScript interface of a LocalStorage object in utils/storage.ts}]
+export interface LocalStorage {
+  filters?: Record<string, any>
+  config?: Record<string, any>
+}
+
+export type LocalStorageKeys = keyof LocalStorage
+\end{lstlisting}
+
+\begin{lstlisting}[style=ES6, caption={utils/storage.ts}]
+export const setStoredKey = (
+  key: LocalStorageKeys,
+  data: Record<string, any>
+): Promise<void> => {
+  const vals: LocalStorage = { [key]: data }
+  return new Promise((resolve) => {
+    chrome.storage.local.set(vals, resolve)
+  })
+}
+
+export const setStoredFilters = (
+  filters: Record<string, any>
+): Promise<void> => {
+  return setStoredKey('filters', filters)
+}
+\end{lstlisting}

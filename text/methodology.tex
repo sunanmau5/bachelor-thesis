@@ -86,7 +86,7 @@ Extensions can store data in two places: (1) on the web server or (2) on the web
 \subsection*{Cookies}
 HTTP cookies, or simply cookies, were designed to store session information on the client. As part of any response to an HTTP request, the server was required to send a Set-Cookie HTTP header containing session information, according to the specification. A server response's headers, for example, might look like this:
 
-\begin{lstlisting}[language={}]
+\begin{lstlisting}[language={}, caption={Cookie server response's headers}]
   HTTP/1.1 200 OK
   Content-type: text/html
   Set-Cookie: name=value
@@ -95,7 +95,7 @@ HTTP cookies, or simply cookies, were designed to store session information on t
 
 This HTTP response creates a cookie called "name" with the value "value." When sent, both the name and the value are URL-encoded. Browsers save such session information and send it back to the server via the Cookie HTTP header for each subsequent request, as shown below:
 
-\begin{lstlisting}[language={}]
+\begin{lstlisting}[language={}, caption={Cookie HTTP header}]
   GET /index.jsl HTTP/1.1
   Cookie: name=value
   Other-header: other-header-value
@@ -118,7 +118,7 @@ It is an asynchronous, key-value browser-based NoSQL (Not Only SQL) data store. 
 IndexedDB has been eliminated from the list for the same reason that Web Storage has been removed. First, IndexedDB databases are tied to the page's origin (protocol, domain, and port), so information cannot be shared across domains. This means that \url{www.wrox.com} and \url{p2p.wrox.com} have their own data stores. Second, IndexedDB is extremely slow, even slower than a database on a low-cost server. Inserting hundreds of documents can take several seconds. Time is important for a quick page load. Even sending data to the backend over the internet can be faster than storing it in an IndexedDB database. Third, a workaround is required for IndexedDB to function alongside the Chrome extension. IndexedDB is a low level API that requires significant setup before use, which can be particularly painful for storing simple data. Unlike most modern promise-based APIs, it is event based. Promise wrappers like \emph{idb}\footnote{\emph{idb} is a tiny library that mostly mirrors the IndexedDB API, but with small improvements that make a big difference to usability. GitHub repository: \url{https://github.com/jakearchibald/idb}} for IndexedDB hide some of the powerful features but more importantly, hide the complex machinery (e.g. transactions, schema versioning) that comes with the IndexedDB library.
 
 \subsection*{Chrome Storage API}
-This API has been optimized to meet the specific storage needs of extensions \autocite{chrome2021storage}. It has the same storage capabilities as the \verb;localStorage; API, with the following important differences:
+Google Chrome provides an API called chrome.storage. This API has been optimized to meet the specific storage needs of extensions \autocite{chrome2021storage}. It allows you to directly synchronize data and persist data across tabs. Asynchronous storage ensures that scripts are not interrupted. As a result, asynchronous saving outperforms synchronous saving in terms of performance. The asynchronous behavior must be considered during implementation. Web Storage or \verb;localStorage; has a maximum memory limit of 5 MB and does not support tab-spanning storage because the data is only available in the current context. The cross tab storage and readout is required for the extension's development. It has more or less the same storage capabilities as the \verb;localStorage; API, with the following important differences:
 
 \begin{itemize}
   \item Using \verb;storage.sync; user data can be automatically synced.
@@ -129,4 +129,4 @@ This API has been optimized to meet the specific storage needs of extensions \au
   \item The administrator's enterprise policies for the extension can be read (using \verb;storage.managed; with a schema).
 \end{itemize}
 
-Using \verb;chrome.storage; can alleviate the aforementioned limitations with other client-side data storage solutions. Chrome Storage API is well-documented, simple, and takes very little time to set up. Data stored in chrome.storage can be accessed not only from tabs and windows of the same origin. The maximum amount of data that can be stored in local storage is 5MB, as measured by the JSON stringification of each value plus the length of each key. However, this value can be ignored if \verb;unlimitedStorage;\footnote{This permission applies only to Web SQL Database and application cache (see issue \url{https://bugs.chromium.org/p/chromium/issues/detail?id=58985}). Also, it doesn't currently work with wildcard subdomains such as \url{http://*.example.com}.} permission is used.
+Using \verb;chrome.storage; can alleviate the aforementioned limitations with other client-side data storage solutions. Chrome Storage API is well-documented, simple, and takes very little time to set up. Data stored in chrome.storage can be accessed not only from tabs and windows of the same origin. The maximum amount of data that can be stored in local storage is 5MB, as measured by the JSON stringification of each value plus the length of each key. However, this value can be ignored if \verb;unlimitedStorage;\footnote{This permission applies only to Web SQL Database and application cache (see issue \url{https://bugs.chromium.org/p/chromium/issues/detail?id=58985}). Also, it doesn't currently work with wildcard subdomains such as \url{http://*.example.com}.} permission is used. Due to the limitations of HTML5 storage in the context of developing a Chrome Extension, the decision is made to use \verb;chrome.storage;.
