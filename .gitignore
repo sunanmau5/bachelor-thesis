@@ -1,21 +1,5 @@
 .DS_Store
 .vscode/
 
-texput.log
-*-blx.bib
-*.bbl
-*.aux
-*.blg
-*.fdb_latexmk
-*.fls
-*.lof
-*.log
-*.lol
-*.lot
-*.out
-*.run.xml
-*.synctex*
-*.toc
-*.pdf
-*.pdf
-node_modules
+node_modules/
+out/

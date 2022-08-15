@@ -69,6 +69,7 @@ This section walks through the project's file structure, as shown in \autoref{di
 \end{figure}
 
 \section{Data storage}
+\subsection*{TODO: Describe these points}
 This section goes over the data storage used for the project.
 
 \begin{itemize}
@@ -78,8 +79,9 @@ This section goes over the data storage used for the project.
 \end{itemize}
 
 \section{Test}
-% TODO:
 To ensure that the \texttt{chrome.storage} is tested, the unit tests must run within the context of a Chrome Extension. Furthermore, this allows for more thorough testing of the extension's individual components. Due to the increasing complexity, the use of a mocking framework for data simulation was omitted. For the tests, a configuration object is used instead. Because it allows for modular development and is widely used, Jest will be used as the test framework.
+% TODO:
+\subsection*{TODO: Describe these points}
 \begin{itemize}
   \item What kind of test? Unit testing, integration testing or functional testing?
   \item Short explanation on types of test
@@ -102,17 +104,17 @@ By setting the \verb;run_at; field to be \verb;document_idle;, the browser choos
 {
   "name": "Filtre",
   "description": "A filtering assistant for Chrome",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "manifest_version": 3,
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "icons/icon-filtre-16.png",
+    "48": "icons/icon-filtre-48.png",
+    "128": "icons/icon-filtre-128.png"
   },
   "action": {
     "default_popup": "popup.html",
     "default_title": "Filtre",
-    "default_icon": "icon.png"
+    "default_icon": "icons/icon-filtre-16.png"
   },
   "permissions": ["storage", "tabs", "unlimitedStorage"],
   "options_page": "options.html",
@@ -177,7 +179,7 @@ The first question is addressed by \autoref{lst:manifest}, on the \verb;content_
 To answer the second question, the record that we want to store needs to be uniform. A TypeScript type is created to provide a clear record structure.
 
 \begin{lstlisting}[style=es6, caption={TypeScript type of a record entry (TypeScript)}]
-export type Entry = {
+export type ParameterType = {
   uuid: string
   createdAt: number
   version: string
@@ -187,7 +189,19 @@ export type Entry = {
   lastUpdatedAt: number
 }
 
-export type Entries = Entry[]
+export type Parameters = ParameterType[]
+
+export type PathType = {
+  name: string
+  subpaths: PathType[]
+  parameters: Parameters
+}
+
+export type Paths = PathType[]
+
+export type Entry = {
+  [host: string]: Paths
+}
 \end{lstlisting}
 
 \subsection*{Filters in URLs}
@@ -232,19 +246,23 @@ The URL must be saved as a JSON object in order to count how many times each que
 
 \begin{lstlisting}[language=json, caption={A record example from app.marta.de (JSON)}]
 {
-  "app.marta.de": {
-    "caregivers": [
-      {
-        "count": 1,
-        "createdAt": 1660224894790,
-        "lastUpdatedAt": 1660224894790,
-        "paramKey": "caregiver.germanVerbalProficiency",
-        "paramValue": "one,two",
-        "uuid": "8006a4a5-482e-4282-940f-569a54fd29ce",
-        "version": "1.0.0"
-      }
-    ]
-  }
+  "app.marta.de": [
+    {
+      "name": "/caregivers",
+      "parameters": [
+        {
+          "count": 1,
+          "createdAt": 1660224894790,
+          "lastUpdatedAt": 1660224894790,
+          "paramKey": "caregiver.germanVerbalProficiency",
+          "paramValue": "one,two",
+          "uuid": "8006a4a5-482e-4282-940f-569a54fd29ce",
+          "version": "0.1.0"
+        }
+      ],
+      "subpaths": []
+    }
+  ]
 }
 \end{lstlisting}
 
@@ -254,99 +272,151 @@ In order to store nested URL path in our data structure, the URL is traversed ju
 
 \begin{lstlisting}[language=json, caption={Record with long pathname (JSON)}, label={lst:recordLongPathname}]
 {
-  "www.lacoste.com": {
-		"de": {
-			"lacoste": {
-				"herren": {
-					"schuhe": {
-						"sneakers": [
-							{
-								"count": 2,
-								"createdAt": 1660229337551,
-								"lastUpdatedAt": 1660229348255,
-								"paramKey": "filters",
-								"paramValue": "%7B%22searchColorID%22:%22Schwarz%22%7D",
-								"uuid": "3f49cd2e-92df-4297-8809-1ccd0a7a8e89",
-								"version": "1.0.0"
-							}
-						]
-					}
+  "www.lacoste.com": [
+		{
+			"name": "/de",
+			"parameters": [],
+			"subpaths": [
+				{
+					"name": "/lacoste",
+					"parameters": [],
+					"subpaths": [
+						{
+							"name": "/herren",
+							"parameters": [],
+							"subpaths": [
+								{
+									"name": "/schuhe",
+									"parameters": [],
+									"subpaths": [
+										{
+											"name": "/sneakers",
+											"parameters": [],
+											"subpaths": [
+												{
+													"name": "/",
+													"parameters": [
+														{
+															"count": 1,
+															"createdAt": 1660552042754,
+															"lastUpdatedAt": 1660552042754,
+															"paramKey": "filters",
+															"paramValue": "%7B%22searchColorID%22:%22Schwarz%22%7D",
+															"uuid": "8a737280-8feb-4968-a97f-222424eb6c95",
+															"version": "0.1.0"
+														}
+													],
+													"subpaths": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
 				}
-			}
+			]
 		}
-	}
+	],
 }
 \end{lstlisting}
 
-Because the data structure shown in \autoref{lst:recordLongPathname} is quite scalable, visiting another pathname from the same host would not be a problem, as shown in \autoref{lst:recordDifferentPathnames}. This structure, however, still have room for improvements. This only allows each subpath to either have an array, or an JSON object, not both.
+Because the data structure shown in \autoref{lst:recordLongPathname} is quite scalable, visiting another pathname from the same host would not be a problem, as shown in \autoref{lst:recordDifferentPathnames}. This structure allows each subpath to have another subpaths and queries. This structure enables each subpath to contain additional subpaths and queries. If a user visits the URL \url{https://www.lacoste.com/de/lacoste/herren/schuhe?filters=...}, the parameter values are then pushed into the parameters array under the subpath \texttt{/schuhe}.
 
 \begin{lstlisting}[language=json, caption={Record with different pathnames (JSON)}, label={lst:recordDifferentPathnames}]
-  "www.lacoste.com": {
-		"de": {
-			"lacoste": {
-				"herren": {
-					"schuhe": {
-						"outdoor": [
-							{
-								"count": 2,
-								"createdAt": 1660229836471,
-								"lastUpdatedAt": 1660229839660,
-								"paramKey": "filters",
-								"paramValue": "%7B%22searchColorID%22:%22Schwarz%22%7D",
-								"uuid": "705c72bd-27ba-4784-b9ef-e0abfa6476a6",
-								"version": "1.0.0"
-							}
-						],
-						"sneakers": [
-							{
-								"count": 2,
-								"createdAt": 1660229337551,
-								"lastUpdatedAt": 1660229609837,
-								"paramKey": "filters",
-								"paramValue": "%7B%22searchColorID%22:%22Schwarz%22%7D",
-								"uuid": "3f49cd2e-92df-4297-8809-1ccd0a7a8e89",
-								"version": "1.0.0"
-							}
-						]
-					}
-				}
-			}
-		}
-	},
+...
+  {
+    "name": "/schuhe",
+    "parameters": [],
+    "subpaths": [
+      {
+        "name": "/sneakers",
+        "parameters": [],
+        "subpaths": [
+          {
+            "name": "/",
+            "parameters": [
+              {
+                "count": 2,
+                "createdAt": 1660552137705,
+                "lastUpdatedAt": 1660552137705,
+                "paramKey": "filters",
+                "paramValue": "%7B%22searchColorID%22:%22Schwarz%22%7D",
+                "uuid": "5882c1bf-92e8-4e3f-9454-1b6f1acd6dc7",
+                "version": "0.1.0"
+              }
+            ],
+            "subpaths": []
+          }
+        ]
+      },
+      {
+        "name": "/outdoor",
+        "parameters": [],
+        "subpaths": [
+          {
+            "name": "/",
+            "parameters": [
+              {
+                "count": 1,
+                "createdAt": 1660552464135,
+                "lastUpdatedAt": 1660552464135,
+                "paramKey": "filters",
+                "paramValue": "%7B%22searchColorID%22:%22Schwarz%22%7D",
+                "uuid": "31b25e02-9631-4bc1-acda-740c7fb58343",
+                "version": "0.1.0"
+              }
+            ],
+            "subpaths": []
+          }
+        ]
+      }
+    ]
+  }
+...
 \end{lstlisting}
 
 \begin{lstlisting}[style=ES6, caption={Resursive pathname to JSON function (TypeScript)}]
-const pathnameToJsonRecursive = (
-  json: Record<string, any>,
-  subdirectories: string[],
-  parameters: Record<string, any>
-): Record<string, any> | undefined => {
-  // Get the first element of array
-  const element = subdirectories.shift()
+const recursiveFunc = (
+  filters: PathType[],
+  paths: Array<string>,
+  parameters: Record<string, string | string[]>
+) => {
+  const element = paths.shift()
+  if (typeof element === 'undefined' || element === null) return
+  const pathIndex = filters.findIndex((f) => f.name === element)
 
-  // Exit condition
-  if (!element) return
-
-  // If JSON key exists, use the existing object, otherwise an empty
-  // object is created. Or upsert parameter count if json[element] is
-  // an array.
-  if (
-    !json[element] ||
-    (Array.isArray(json[element]) && json[element].length >= 0)
-  ) {
-    json[element] =
-      subdirectories.length === 0
-        ? upsertParams(json[element], parameters)
-        : {}
+  if (pathIndex > -1) {
+    if (paths.length > 0) {
+      recursiveFunc(filters[pathIndex].subpaths, paths, parameters)
+    } else {
+      filters[pathIndex].parameters = upsertParams(
+        filters[pathIndex].parameters,
+        parameters
+      )
+    }
+  } else {
+    if (paths.length > 0) {
+      const newLength = filters.push({
+        name: element,
+        parameters: [],
+        subpaths: []
+      })
+      recursiveFunc(filters[newLength - 1].subpaths, paths, parameters)
+    } else {
+      const newParameters = upsertParams([], parameters)
+      filters.push({
+        name: element,
+        parameters: newParameters,
+        subpaths: []
+      })
+    }
   }
-
-  return
-    pathnameToJsonRecursive(json[element], subdirectories, parameters)
 }
 \end{lstlisting}
 
-% TODO:
-\subsection*{problem apa aja yg di encounter?}
+\subsection*{TODO: What else did I encounter?}
 \begin{itemize}
   \item setting up tests using Jest and sinon-chrome
   \item storing and fetching the records in the most efficient way

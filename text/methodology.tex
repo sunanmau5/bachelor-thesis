@@ -17,7 +17,15 @@ The concept was then expanded upon and a decision was reached. Instead of adding
 
 \section{Requirements Elicitation and Analysis}
 \label{requirements_analysis}
-The extension is used to improve the user's experience when navigating through an e-commerce website to search for a wanted product or service. The idea is to integrate the end user's browser with an extension, which will record the host name or domain of the visited website's URL along with the respective parameters. When enough records have been collected, the extension will display a list of parameters for the visited domain. Path parameters and query parameters will be separated from these parameters. The user can then navigate through the path parameters in the same way that they would navigate through a file system. When the last path parameter is reached, the query parameters and the number of times these parameters are called in the URL are displayed. Below the list is an input field and a button; these input fields will be filled based on and while navigating through the selected parameters. When the "Navigate" button is clicked, a new tab will open with the full-path built URL.
+The extension is used to improve the user's experience when navigating through an e-commerce website to search for a wanted product or service. The idea is to integrate the end user's browser with an extension, which will record the host name or domain of the visited website's URL along with the respective parameters. When enough records have been collected, the extension will display a list of parameters for the visited domain. Path parameters and query parameters will be separated from these parameters. The user can then navigate through the path parameters in the same way that they would navigate through a file system. When a path with parameters is reached, the query parameters and the number of times these parameters are called in the URL are displayed. Below the list is an input field and a button; this input field is filled based on and while navigating through the selected parameters. When the "Navigate" button is clicked, a new tab opens with the full-path built URL.
+
+Jakob Nielsen's third usability heuristic for user interface design is user control and freedom. This principle states:
+
+\begin{displayquote}
+  Users often choose system functions by mistake and will need a clearly marked "emergency exit" to leave the unwanted state without having to go through an extended dialogue. Support undo and redo \autocite{nielsen1994usability}.
+\end{displayquote}
+
+\noindent With this in mind, the user should be able to return after moving forward. A close button should be provided to make it clear to users how to exit the extension. To broaden the definition of "control," users should also have the ability to customize; they should be able to choose which query parameters should be saved and which should not.
 
 These prerequisites and considerations result in the following requirements for the extension, which is to be developed within the scope of this thesis. These requirements are classified into functional and non-functional requirements.
 
@@ -25,11 +33,16 @@ These prerequisites and considerations result in the following requirements for 
 A requirement is called functional if its underlying need is functional, i.e., it relates to information processing objects (data, operations, behavior). In other words, functional requirements are statements of services the system should provide, how the system should react to particular inputs and how the system should behave in particular situations \autocite{sommerville2011software}. The following functional requirements are defined for the extension:
 
 \begin{itemize}
-  \item User can see how many times each query parameters for each host name are used
-  \item User can build a URL query string based on their history
-  \item User can navigate to the URL with the assembled query string
-  \item The extension saves the host name, pathname and query parameters of the URL
-  \item The extension stores the URL attributes each time a page is loaded
+  \item FR-01: User can see how many times each query parameters for each host name and path name are used
+  \item FR-02: User can see a list of paths and parameters based on their history
+  \item FR-03: User can assemble a URL query string by selecting a path or a parameter
+  \item FR-04: User can navigate to the URL with the assembled query string
+  \item FR-05: The extension saves the host name, pathname and query parameters of the URL
+  \item FR-06: The extension stores the URL attributes each time a page is loaded
+  \item FR-07: User can define which query parameters should be excluded in the options page
+  \item FR-08: User can remove a query parameter count by clicking on remove icon
+  \item FR-09: User can clear all the filter from the options page
+  \item FR-10: User can reset the configuration from the options page
 \end{itemize}
 
 In addition to functional requirements, non-functional requirements are also defined as follows.
@@ -38,12 +51,13 @@ In addition to functional requirements, non-functional requirements are also def
 A requirement is called non-functional if its underlying need is a non-objective property. In other words non-functional requirementes are constraints on the services or functions offered by the system such as timing constraints, constraints on the development process, standards, etc \autocite{sommerville2011software}. It often apply to the system as a whole rather than individual features or services. The following non-functional requirements arise for the extension to be developed:
 
 \begin{itemize}
-  \item UI components must be implemented using React.
-  \item TypeScript must be used to implement dynamic functions.
-  \item Data must be saved on the end-user's Chrome storage.
-  \item Both the external components used and the developed component itself must be well documented.
-  \item The individual external libraries must be easy to update.
-  \item Modularization must be taken into consideration throughout development so that individual modules and/or components can be easily reused, expanded or changed.
+  \item NFR-01: UI components must be implemented using React.
+  \item NFR-02: TypeScript must be used to implement dynamic functions.
+  \item NFR-03: Data must be saved on the end-user's Chrome storage.
+  \item NFR-04: User's configuration from the options page must be saved on the end-user's Chrome storage.
+  \item NFR-05: Both the external components used and the developed component itself must be well documented.
+  \item NFR-06: The individual external libraries must be easy to update.
+  \item NFR-07: Modularization must be taken into consideration throughout development so that individual modules and/or components can be easily reused, expanded or changed.
 \end{itemize}
 
 While functional requirements are perceived as such by the user, non-functional requirements are implementation details that remain largely hidden from the user.
