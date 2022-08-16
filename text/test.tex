@@ -1,0 +1,71 @@
+\chapter{Test}
+Testing is an essential part of software development. Today's code should not be a burden to maintain later in the application's life cycle. To avoid creating these burdens, tests are written. The benefit of tests is that they allow developers to provide documentation for future contributors in addition to simply verifying function behavior. There are, however, numerous types of software testing techniques, such as Unit tests, Integration tests, Functional tests and many others. For the development of the extension, unit tests are written to ensure that each component of the system works perfectly and fulfills its function in isolation.
+
+\section{Unit Test}
+To ensure that the \texttt{chrome.storage} is tested, the unit tests must run within the context of a Chrome Extension. Furthermore, this allows for more thorough testing of the extension's individual components. Due to the increasing complexity, the use of a mocking framework for data simulation was omitted. For the tests, a configuration object is used instead. Because it allows for modular development, relatively faster than other testing frameworks thanks to parallel testing and is widely used, \emph{Jest}\footnote{\emph{Jest} is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase. More information on \url{https://jestjs.io/}} will be used as the testing framework.
+
+The unit tests have three main goals: to test the parse function from a path name to an array, to ensure that the parameter count is correctly updated and to test the transformation of the full-path URL to a JSON object. \autoref{table:pathnameTestsDefinitions} shows, sorted by test identifier, how the path name parsing tests are defined:
+
+\begin{tabularx}{\textwidth}{p{0.05\textwidth} p{0.3\textwidth} p{0.25\textwidth} p{0.3\textwidth}}
+  \caption{Test definitions for parsing path name to an array of string}                                                                                                         \\
+  \toprule
+  \textbf{ID} & \textbf{Req. Scenario}                                        & \textbf{Test data}          & \textbf{Expected result}                                           \\
+  \midrule
+  T-01        & Convert simple single path name                               & \url{/path}                 & \texttt{['/path']}                                                 \\
+  \midrule
+  T-02        & Convert simple path name with one subpath                     & \url{/path/a}               & \texttt{['/path', '/a']}                                           \\
+  \midrule
+  T-03        & Convert simple pathname with multiple subpath                 & \url{/path/a/b/c/d/e/f/g/h} & \texttt{['/path', '/a', '/b', '/c', '/d', '/e', '/f', '/g', '/h']} \\
+  \midrule
+  T-04        & Convert path name with only \verb;"/"; character              & \url{/}                     & \texttt{['/']}                                                     \\
+  \midrule
+  T-05        & Convert path name with \verb;"/"; character before parameters & \url{/path/}                & \texttt{['/path', '/']}                                            \\
+  \bottomrule
+  \label{table:pathnameTestsDefinitions}
+\end{tabularx}
+
+\noindent After testing the URL path name parsing to an array of strings, multiple scenarios when updating and inserting parameters are tested as shown in \autoref{table:parameterTestsDefinitions}.
+
+\begin{tabularx}{\textwidth}{p{0.05\textwidth} p{0.3\textwidth} p{0.25\textwidth} p{0.3\textwidth}}
+  \caption{Test definitions for upserting parameters}                                                                                                                                                                                                                                                                                                                                                                          \\
+  \toprule
+  \textbf{ID} & \textbf{Req. Scenario}                                & \textbf{Test data} & \textbf{Expected result}                                                                                                                                                                                                                                                                                                          \\
+  \midrule
+  T-06        & Insert new parameter                                  & \url{?a=b}         & The parameter key \texttt{a} is saved along with its value \texttt{b} one time                                                                                                                                                                                                                                                    \\
+  \midrule
+  T-07        & Update parameter count                                & \url{?a=b}         & The parameter key \texttt{a} is saved along with its value \texttt{b} mutliple times                                                                                                                                                                                                                                              \\
+  \midrule
+  T-08        & Insert multiple parameters                            & \url{?a=b          & c=d                                                                                  & e=f                                                                                                         & g=h & i=j} & The parameter keys \texttt{a, c, e, g, i} are saved along with its values \texttt{b, d, f, h, j} one time       \\
+  \midrule
+  T-09        & Update multiple parameter counts                      & \url{?a=b          & c=d                                                                                  & e=f                                                                                                         & g=h & i=j} & The parameter keys \texttt{a, c, e, g, i} are saved along with its values \texttt{b, d, f, h, j} multiple times \\
+  \midrule
+  T-10        & Insert parameters with same values but different keys & \url{?a=b          & c=b}                                                                                 & The parameter keys \texttt{a, c} are saved separately even though they have the same value \texttt{b}                                                                                                                                      \\
+  \midrule
+  T-11        & Insert parameters with same keys but different values & \url{?a=b          & a=c}                                                                                 & The parameter values \texttt{b, c} are combined and saved together due to matching parameter key \texttt{a}                                                                                                                                \\
+  \midrule
+  T-12        & Insert parameter with only key, without value         & \url{?a            & c}                                                                                   & The parameter keys \texttt{a, c} are saved with an empty string as its parameter value                                                                                                                                                     \\
+  \bottomrule
+  \label{table:parameterTestsDefinitions}
+\end{tabularx}
+
+\noindent Finally, as shown in \autoref{table:urlTestsDefinitions}, the scenarios of converting a full-path URL to a JSON object are tested.
+
+\begin{tabularx}{\textwidth}{p{0.05\textwidth} p{0.3\textwidth} p{0.25\textwidth} p{0.3\textwidth}}
+  \caption{Test definitions for URL}                                                                                                                                                                                                                                                                                                                   \\
+  \toprule
+  \textbf{ID} & \textbf{Req. Scenario}                             & \textbf{Test data}                    & \textbf{Expected result}                                                                                                                                                                                                                  \\
+  \midrule
+  T-13        & Store URL with only path name                      & \url{/path}                           & The subpath \texttt{/path} is saved without another subpaths or parameters                                                                                                                                                                \\
+  \midrule
+  T-14        & Store URL with path name and a parameter           & \url{/path?p=o}                       & The subpath \texttt{/path} is saved with \texttt{p} as key and \texttt{o} as value                                                                                                                                                        \\
+  \midrule
+  T-15        & Store URL with a long path name and a parameter    & \url{/path/a/b/c/d/e/f/g/h?p=o}       & Nested subpaths are saved and the parameter \texttt{p=o} is appended on the last subpath \texttt{/h}                                                                                                                                      \\
+  \midrule
+  T-16        & Store URL with a path name and multiple parameters & \url{/path?f=o                        & s=t}                                                                                                                                  & The subpath \texttt{/path} is saved with two different key parameters and their respective values \\
+  \midrule
+  T-17        & Store URL with only parameter                      & \url{/?p=o}                           & The subpath \texttt{/} is saved with \texttt{o} as key and \texttt{o} as value                                                                                                                                                            \\
+  \midrule
+  T-18        & Store URLs with parameters on two path names       & \url{/path?p=o} and \url{/path/a?p=o} & The subpath \texttt{/path} is saved with parameter \texttt{p=o} along with a subpath \texttt{/a} also with the parameter \texttt{p=o}                                                                                                     \\
+  \bottomrule
+  \label{table:urlTestsDefinitions}
+\end{tabularx}

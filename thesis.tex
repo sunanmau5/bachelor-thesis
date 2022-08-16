@@ -1,7 +1,7 @@
 
 %----------------------------------------------------------------------------------------
-% 	Template: Abschlussarbeiten des Studiengangs Angewandte Informatik an der HTW Berlin
-% 	C. Schmidt
+% Bachelor Thesis: Maunakea, Sunan Regi
+% Template by: Prof.C. Schmidt
 %----------------------------------------------------------------------------------------
 %	Pakete und Konfigurationen
 %----------------------------------------------------------------------------------------
@@ -31,15 +31,15 @@
 \usepackage[hyphens]{url}
 
 \usepackage{hyperref}
+\usepackage{multirow}
 \usepackage{ltablex}
-
+\usepackage{float}
 
 %----------------------------------------------------------------------------------------
 %	BIB.-Datei und Quellenverwaltung
 %----------------------------------------------------------------------------------------
 \usepackage[backend=bibtex,style=numeric]{biblatex}
 \addbibresource{thesis.bib}
-%\usepackage{natbib} % use natbib for references
 %----------------------------------------------------------------------------------------
 
 \usepackage[sc]{mathpazo} % Use the Palatino font
@@ -52,15 +52,12 @@
 \usepackage{booktabs} % Horizontal rules in tables
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 \usepackage{enumitem} % Customized lists
-% \setlist[itemize]{noitemsep} % Make itemize lists more compact
 
 % \usepackage{abstract} % Allows abstract customization
 % \renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
 % \renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
 
 \usepackage{titlesec} % Allows customization of titles
-% \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-% \renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
 \titleformat{\section}{\Large\bfseries\sffamily}{\thesection.}{1em}{} % Change the look of the section titles
 \titleformat{\subsection}{\large\bfseries\sffamily}{\thesubsection.}{1em}{} % Change the look of the section titles
 
@@ -236,16 +233,16 @@
     \linebreak[4]
     \linebreak[4]
     \linebreak[4]
-    Abschlussarbeit
+    Final Thesis
     \linebreak[4]
     \linebreak[4]
-    zur Erlangung des akademischen Grades:
+    submitted for the academic degree:
     \linebreak[4]
     \linebreak[4]
     \textbf{Bachelor of Science (B.Sc.)}
     \linebreak[4]
     \linebreak[4]
-    an der
+    at
     \linebreak[4]
     \linebreak[4]
     Hochschule f\"ur Technik und Wirtschaft (HTW) Berlin
@@ -256,13 +253,13 @@
     \linebreak[4]
     \linebreak[4]
     \linebreak[4]
-    1. Gutachter\_in: Prof. Dr. Elena Sch\"uler\linebreak[4]
-    2. Gutachter\_in: Birol Aksu\linebreak[4]
+    1. Supervisor: Prof. Dr. Elena Sch\"uler\linebreak[4]
+    2. Supervisor: Birol Aksu\linebreak[4]
     \linebreak[4]
     \linebreak[4]
     \linebreak[4]
     \linebreak[4]
-    Eingereicht von Sunan Regi Maunakea 566144
+    Submitted by Sunan Regi Maunakea [s0566144]
     \linebreak[4]
     \linebreak[4]
     \linebreak[4]
@@ -312,6 +309,7 @@ Google Chrome Extension, Search and Filter URL Parameters
 \input{text/theoretical-basis}
 \input{text/methodology}
 \input{text/implementation}
+\input{text/test}
 \input{text/demonstration-and-evaluation}
 \input{text/conclusion}
 \input{text/references}
