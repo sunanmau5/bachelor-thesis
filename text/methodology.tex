@@ -80,10 +80,23 @@ A requirement is called non-functional if its underlying need is a non-objective
 While functional requirements are perceived as such by the user, non-functional requirements are implementation details that remain largely hidden from the user.
 
 \section{Software Design}
+The design of the software can now be defined as the requirements are analyzed. This section discusses the extension's structure and design patterns for meeting the requirements listed. When developing software, a software architecture is essential. It provides a framework for how the software should be built, and decisions made during this stage are critical for the development process moving forward. For this reason, a software architecture diagram is presented.
+
+\autoref{fig:softwareArchitectureDiagram} depicts the components of the software and their interactions with one another. From the software architecture diagram, it is conceivable that there are two major components: Extension core and Chrome APIs. An extension core consists of a user interface and service workers. Content scripts are not visualized, because they are not required for the development of the extension. The extension core would interact with Chrome APIs to persist as well as fetch information on \texttt{chrome.storage} needed for concluding the most used parameters.
+
+The user interface of the extension consists of the pop up and the options page. The pop up communicates with \texttt{chrome.storage} API to obtain the available filters for the URL's host name, which is retrieved using \texttt{chrome.tabs} API. Similarly, the options page uses \texttt{chrome.storage} API to get the configuration object rather than the filters. As mentioned in \autoref{service_worker}, a chrome extension has a background script called service worker. The service workers interact with \texttt{chrome.tabs} API to update the filter object on \texttt{chrome.storage} whenever a tab is updated.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{assets/software_architecture_diagram.png}
+  \caption{Software Architecture Diagram}
+  \label{fig:softwareArchitectureDiagram}
+\end{figure}
+
 
 \section{Technologies}
 \label{technologies_used}
-The following section argues the decision about the choice of implementation browser. This affects how the data can be stored when the extension is implemented, which is discussed in the second section.
+The software architecture not only defines the structure of the software, but it also aids in determining which technologies may be required to build the software. The following section argues the decision about the choice of implementation browser. This affects how the data can be stored when the extension is implemented, which is discussed in the second section.
 
 \subsection{Choice of Implementation Browser}
 The selection of a browser was based on a number of factors. The first was the browser's usage rate. This is significant since anyone who doesn't already have the necessary browser will need to download and install it. Drop-outs due to the installation process or being unfamiliar with a new browser can significantly raise the cost of conducting the survey. The ease of use of the API and simplicity of implementation were additional crucial criteria. The extension programming process should ideally only need a basic understanding of the extension API. The capabilities of the API offered by the browser was another factor considered. The extension needs to:
