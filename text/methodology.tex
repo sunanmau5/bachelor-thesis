@@ -15,6 +15,23 @@ The first problem with this idea was that it collected filter usage data from ev
 
 The concept was then expanded upon and a decision was reached. Instead of adding those quick filters directly into the platform, an extension that allows for even more personalized filter suggestions should be developed. The aforementioned issues can be addressed by developing an extension. The information that will be saved varies for each user and is saved in the end user's browser, which means that other users' activity will not impact the filter suggestions. Furthermore, search and filter is a popular website design method. It would benefit not just Marta's platform, but also other e-commerce websites like Lacoste, Nike, Adidas, and others. Moving it to an extension would allow people to choose whether or not to install it. And, because this is a separate capability with a different software architecture than Marta's primary platform, a new repository or codebase is developed to make it easier to distinguish and manage.
 
+\section{Existing Softwares}
+This section covers the currently available applications or extensions that are similar but do not completely solve the aforementioned problem. There exists a considerable amount of softwares on manipulating URL parameters but not on providing quick filters suggestions.
+
+\subsection*{Query params}
+\emph{Query params}\footnote{\emph{Query params} extension is accessible on: \url{https://chrome.google.com/webstore/detail/query-params/jgacgeahnbmkhdhldifidddbkneahmal}} is a Chrome extension which provides user a user interface to read and write URL query parameters for the currently active tab. This extension is approximately 85 KB in size, which is relatively small for such an extension. This extension, however, has a rather different goal than ours, which is manage the URL parameters rather than store them.
+
+\subsection*{Easy URL Editor}
+Another Chrome extension for modifying URL parameters is \emph{Easy URL Editor}\footnote{\emph{Easy URL Editor} extension is accessible on: \url{https://chrome.google.com/webstore/detail/easy-url-editor/kojpdadnbbicdfgfadonheclfpcjpiah}}. The goal of this extension is to make it easier to edit URL parameters for long URLs. This extension allows users to view each URL parameter, add new ones, and delete existing ones. Although they both serve the same purpose, this extension is comparatively larger in size (207 KB) than the previous one.
+
+\subsection*{store-params}
+This software, unlike the previous two, is not a browser extension, but rather a vanilla JavaScript library. \emph{Store-params}\footnote{\emph{store-params}'s GitHub repo is accessible on: \url{https://github.com/livechat/store-params}} is lightweight and used for storing URL parameters in cookies, \texttt{localStorage} or \texttt{sessionStorage} with flexible configuration options. Although there are advantages on using this library, the functionality remains limited. Because this is only a library, it must be integrated with an application to function. It serves the purpose of storing the URL parameters, but not modifying them.
+
+\subsection*{ItemsJS}
+\emph{ItemsJS}\footnote{\emph{ItemsJS}'s GitHub repo is accessible on: \url{https://github.com/itemsapi/itemsjs}} is another JavaScript library that aims to perform fast searches on JSON datasets. This library differs from the other three mentioned above in that it does not use URLs and instead relies solely on JSON datasets. It is primarily used for data classification of companies, products, publications, documents, and so on. This dependency-free library offers faceted navigation as well as custom full-text search. Since the goal of the thesis is to create a universal solution for every website, this library remains briefly addressed.
+
+Although softwares have been released by many developers, this problem is still insufficiently explored. A new approach is therefore needed for the goal of this thesis.
+
 \section{Requirements Elicitation and Analysis}
 \label{requirements_analysis}
 The extension is used to improve the user's experience when navigating through an e-commerce website to search for a wanted product or service. The idea is to integrate the end user's browser with an extension, which will record the host name or domain of the visited website's URL along with the respective parameters. When enough records have been collected, the extension will display a list of parameters for the visited domain. Path parameters and query parameters will be separated from these parameters. The user can then navigate through the path parameters in the same way that they would navigate through a file system. When a path with parameters is reached, the query parameters and the number of times these parameters are called in the URL are displayed. Below the list is an input field and a button; this input field is filled based on and while navigating through the selected parameters. When the "Navigate" button is clicked, a new tab opens with the full-path built URL.
@@ -61,6 +78,8 @@ A requirement is called non-functional if its underlying need is a non-objective
 \end{itemize}
 
 While functional requirements are perceived as such by the user, non-functional requirements are implementation details that remain largely hidden from the user.
+
+\section{Software Design}
 
 \section{Technologies}
 \label{technologies_used}
