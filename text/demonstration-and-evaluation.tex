@@ -1,18 +1,18 @@
 \newpage
 \chapter{Demonstration and Evaluation}
-After the system's features have been implemented, the system as a result of this research project can be demonstrated and evaluated. This chapter presents a demonstration of the use cases derived from the thesis' goal as well as its evaluation based on the requirements analysis elicited in \autoref{requirements_analysis}.
+After the system's features have been implemented, the system can be demonstrated and evaluated. This chapter provides a demonstration of the use cases derived from the objective of the thesis, as well as an evaluation of the use cases based on the requirements analysis conducted in \autoref{requirements_analysis}.
 
 \section{Demonstration}
-Since the extension was originally designed for Marta's website, the demonstration will use it as an example. As a result of this thesis, the following procedure is demonstrated in this chapter:
+Due to the fact that the extension was originally created for Marta's website, it will be used as an example in the demonstration. The following procedure is illustrated in this chapter as a result of this thesis:
 
 \begin{enumerate}
   \item With the extension installed, visit any webpage with URL path or query
   \item Store the URL path and query in a JSON format
   \item Reload the page
-  \item Open the extension pop-up and see how many times the URL parameters are entered
+  \item View the number of times URL parameters have been entered by opening the extension's pop-up.
 \end{enumerate}
 
-Since the extension is not published in the Chrome Web Store yet, the \texttt{dist} directory is loaded manually to \verb;chrome://extensions;. After loading the extension, it appears in the Chrome Extensions Toolbar. Opening the extension the first time will notify users that the entries for the specific host is empty (See \autoref{fig:filtreNoEntries}).
+The \texttt{dist} directory is loaded manually to \verb;chrome://extensions; because the extension has not yet been published in the Chrome Web Store. Once the extension has been loaded, it appears in the Chrome Extensions Toolbar. When the extension is opened for the first time, users will be notified that the entries for the specified host are empty (See \autoref{fig:filtreNoEntries}).
 
 \begin{figure}[H]
   \centering
@@ -21,7 +21,7 @@ Since the extension is not published in the Chrome Web Store yet, the \texttt{di
   \label{fig:filtreNoEntries}
 \end{figure}
 
-In Marta's webapp, families can find suitable caregivers from the URL \url{app.marta.de/caregivers}. The page restricts the search to 30 caregivers. As a result, in addition to the limitation, a filter based on URL query is implemented, allowing families to filter more caregivers. A modal dialog\footnote{\emph{Modal dialog} is a dialog that appears on top of the main content and moves the system into a special mode requiring user interaction. More information on \url{https://www.nngroup.com/articles/modal-nonmodal-dialog/}} is shown to configure the filter. After adjusting the filter settings, the URL is changed to: \url{app.marta.de/caregivers?caregiver.germanVerbalProficiency=one}. This URL is now stored in the \texttt{chrome.storage} of the extension. \autoref{fig:filtreKnownPaths} lists all the stored top-level-paths from the website's host name. In this case, since user only visited the \texttt{/caregivers} page, there is only one item shown.
+Families can find suitable caregivers through the Marta webapp at \url{app.marta.de/caregivers}. The page limits search results to 30 caregivers. In addition to the restriction, therefore, a filter based on URL query is implemented, allowing families to filter more caregivers. A modal dialog\footnote{\emph{Modal dialog} is a dialog that appears on top of the primary content and initiates a special mode that requires user interaction. More information on \url{https://www.nngroup.com/articles/modal-nonmodal-dialog/}} is displayed for filter configuration. After modifying the filter settings, the URL becomes \url{app.marta.de/caregivers?caregiver.germanVerbalProficiency=one}. This URL is now stored in the extension's \texttt{chrome.storage}. \autoref{fig:filtreKnownPaths} is a listing of all the top-level paths stored from the website's hostname. Since the user has only visited the \texttt{/caregivers} page, only one item is displayed.
 
 \begin{figure}[H]
   \centering
@@ -41,7 +41,7 @@ Another thing to note is the input field and the "Navigate" button at the bottom
   \label{fig:filtreParameters}
 \end{figure}
 
-With the help of \emph{Storage Area Explorer}\footnote{\emph{Storage Area Explorer} is a simple editor for Storage Area for Chrome Packaged Apps \& Extensions. GitHub repository: \url{https://github.com/jusio/storage-area-explorer}}, it is possible edit or view the \texttt{chrome.storage} using a user interface without the need for console logging the \texttt{chrome.storage} object in the code (See \autoref{fig:storageAreaExplorer}). The current size and size limit are also displayed within the Storage Explorer.
+With the help of \emph{Storage Area Explorer}\footnote{\emph{Storage Area Explorer} is a an easy-to-use editor for Chrome Packaged Apps \& Extensions' Storage Area. GitHub repository: \url{https://github.com/jusio/storage-area-explorer}}, it is possible edit or view the \texttt{chrome.storage} using a user interface without the need for console logging the \texttt{chrome.storage} object in the code (See \autoref{fig:storageAreaExplorer}). The current size and size limit are also displayed within the Storage Explorer.
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{assets/screenschot_storage_area_explorer.png}
@@ -50,7 +50,7 @@ With the help of \emph{Storage Area Explorer}\footnote{\emph{Storage Area Explor
 \end{figure}
 
 \section{Evaluation}
-Completion of the goals and criteria described in the requirement analysis should be evaluated as a measure to determine whether the system and its functionalities have achieved their main goal in accordance with the thesis goal. \autoref{table:evaluationTableRequirementAnalysis} shows, sorted by requirement identifier, how far the defined requirements have been implemented:
+The achievement of the goals and criteria outlined in the requirement analysis should serve as a metric for determining whether the system and its functionalities have achieved their primary objective in accordance with the thesis objective. \autoref{table:evaluationTableRequirementAnalysis} displays, by requirement identifier, the degree to which the defined requirements have been met:
 
 \begin{tabularx}{\textwidth}{p{0.1\textwidth} p{0.2\textwidth} p{0.6\textwidth}}
   \caption{Evaluation table of requirement analysis}                                                                                                                                                                                                                                                                                                                                                                       \\
@@ -94,7 +94,7 @@ Completion of the goals and criteria described in the requirement analysis shoul
   \label{table:evaluationTableRequirementAnalysis}
 \end{tabularx}
 
-\noindent With minor exceptions, the extension was thus fully implemented. Usability tests were not carried out.
+\noindent Minor exceptions notwithstanding, the extension was therefore fully implemented. No usability tests were conducted.
 
 \section{Publish in the Chrome Web Store}
-Releasing the extension in the Chrome Web Store would mean that at least Google can analyze the implementation and identify possible vulnerabilities. However, an internationalization of the extension should be carried out beforehand.
+The release of the extension in the Chrome Web Store would allow Google to at least examine the implementation and identify potential vulnerabilities. Nonetheless, the extension must be internationalized beforehand.
