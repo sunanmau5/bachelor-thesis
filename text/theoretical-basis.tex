@@ -1,11 +1,13 @@
 \newpage
 \chapter{Theoretical Basis}
-In the first section, this chapter describes the anatomy of a URL and how resources are searched and filtered using URL parameters. The second section illustrates the concept of a site searching. Furthermore, filters and facets are decpicted within the scope of this thesis. The fourth section covers the definition of a browser extension along with its architecture. Finally, the framework for the extension's UI implementation is outlined.
+In the first section, this chapter describes the anatomy of a URL and how resources are searched and filtered using URL parameters. The second section illustrates the concept of a site searching. Furthermore, filters and facets are depicted within the scope of this thesis. The fourth section covers the definition of a browser extension along with its architecture. Finally, the framework for the extension's UI implementation is outlined.
 
 
 % Uniform Resource Locator
 \section{URL}
-Uniform Resource Locator, or URL, is a compact string representation for a resource available via the Internet \autocite{berners1994uniform}. By offering a general identification of the resource's location, URLs are used to locate resources. These resources could be an image, a CSS file, an HTML page, etc. In practice, there are a few exceptions, the most frequent of which is a URL leading to a resource that has either relocated or vanished. After locating a resource, a system may carry out a number of actions on it, which can be described by phrases like "access", "update", "replace", and "find attributes". For each URL scheme, only the "access" method needs to be supplied. The scheme of the URL will be discussed further. Here is an example of an HTTPS URL: \url{https://example.com/filtre/popup.html}
+Uniform Resource Locator, or URL, is a compact string representation for a resource available via the Internet \autocite{berners1994uniform}. By offering a general identification of the resource's location, URLs are used to locate resources. These resources could be an image, a CSS file, an HTML page, etc. In practice, there are a few exceptions, the most frequent of which is a URL leading to a resource that has either relocated or vanished. After locating a resource, a system may carry out a number of actions on it, which can be described by phrases like "access", "update", "replace", and "find attributes". For each URL scheme, only the "access" method needs to be supplied. The scheme of the URL will be discussed further. Here is an example of an HTTPS URL: \url{https://example.com/filtre/popup.html}.
+
+Uniform Resource Identifier, or URI, is a string of characters that, like the URL, identifies a resource on the internet by location, name, or both. It makes it possible to identify resources consistently. Since URI is the superset of URL, every URL is also a URI, but some URIs are not URLs.
 
 \subsection{Anatomy of a URL}
 \label{url_anatomy}
@@ -70,7 +72,7 @@ A well-designed user interface includes filters and facets. By guiding the user 
 
 %Browser Extension
 \section{Browser Extension}
-Browser extensions or addons are third party programs, that can extend the functionality of browsers and improve users' browsing experience \autocite{some2019empoweb}. A browser extension, as opposed to a standard web page, is created specifically for a given browser and uses that browser's extension API. It was necessary to choose a browser as a result. There are frameworks that try to make it feasible to create an extension for several different browsers at once. Although the caliber of these frameworks was unclear, it was decided that the expense of potential problems and additional time spent debugging in many browsers outweighed the benefits.
+Browser extensions or add-ons are third party programs, that can extend the functionality of browsers and improve users' browsing experience \autocite{some2019empoweb}. A browser extension, as opposed to a standard web page, is created specifically for a given browser and uses that browser's extension API. It was necessary to choose a browser as a result. There are frameworks that try to make it feasible to create an extension for several different browsers at once. Although the caliber of these frameworks was unclear, it was decided that the expense of potential problems and additional time spent debugging in many browsers outweighed the benefits.
 
 %Chrome Extension Architecture
 \subsection{Chrome Extension Architecture}
