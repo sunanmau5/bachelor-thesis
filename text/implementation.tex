@@ -6,10 +6,10 @@ After the design has been specified, the extension's implementation may begin. T
 This section goes through some of the technical aspects of the user interface of the extension. The user interface was built with React. As described in \autoref{react}, React makes it easy to create interactive UIs. Using JSX makes it even simpler for web designers to change the browser's DOM using HTML. Furthermore, the user interface is developed in TypeScript rather than regular JavaScript to ensure type safety.
 
 \subsection{Build Tool}
-Nowadays, most front end projects use a build tool to assist in the development of web applications. The build tool for the user interface is \emph{Webpack 5}\footnote{\emph{Webpack} is a bundler for static modules that is used in modern applications written in JavaScript. Webpack version 5 includes faster builds with persistent caching, smaller bundler size, Module Federation, etc. More information on \url{https://webpack.js.org/blog/2020-10-10-webpack-5-release/}}.
+Nowadays, most front end projects use a build tool to assist in the development of web applications. The build tool for the user interface is Webpack 5\footnote{\emph{Webpack} is a bundler for static modules that is used in modern applications written in JavaScript. Webpack version 5 includes faster builds with persistent caching, smaller bundler size, Module Federation, etc. More information on \url{https://webpack.js.org/blog/2020-10-10-webpack-5-release/}}.
 
 \subsection{Component Library}
-A component library is used in this project to speed up UI development. The rebass component library is used in this project. \emph{Rebass}\footnote{\emph{Rebass} is a simple React UI component library that allows you to create primitive UI components using the Styled System library. More information on \url{https://rebassjs.org/}} was chosen because it is lightweight and an excellent choice for prototype and UI development without the need to invest time in establishing a custom design system from the start.
+A component library is used in this project to speed up UI development. The rebass component library is used in this project. Rebass\footnote{\emph{Rebass} is a simple React UI component library that allows you to create primitive UI components using the Styled System library. Rebass homepage: \url{https://rebassjs.org/}} was chosen because it is lightweight and an excellent choice for prototype and UI development without the need to invest time in establishing a custom design system from the start.
 
 \subsection{Code Style}
 In this project, a code formatter (Prettier) and linter (ESLint) are used to ensure a uniform code style and conform with TypeScript best practices.
@@ -457,7 +457,7 @@ const recursiveTopFilterFunc = (
         paramValue
       })
 
-      // Always sort the parameter count in an ascending
+      // Always sort the parameter count in a descending
       // order
       topFilters.sort((a, b) => b.count - a.count)
 
