@@ -6,9 +6,9 @@ After the system's features have been implemented, the system can be demonstrate
 Due to the fact that the extension was originally created for Marta's website, it will be used as an example in the demonstration. The following procedure is illustrated in this chapter as a result of this thesis:
 
 \begin{enumerate}
-  \item With the extension installed, visit any webpage with URL path or query
+  \item With the extension installed, visit any web page with URL path or query
   \item Store the URL path and query in a JSON format
-  \item See the available top filters for the specified host name
+  \item See the available top filters for the specified hostname
   \item View the number of times URL parameters have been entered by opening the extension's pop-up.
 \end{enumerate}
 
@@ -30,9 +30,9 @@ Families can find suitable caregivers through the Marta webapp at \url{app.marta
   \label{fig:filtreKnownPaths}
 \end{figure}
 
-When a user clicks on one of the top filters within the list, the URL of the active tab is modified to the corresponding host name, path and query parameter of the chosen top filter. As long as the top filters share the same path name, they can be combined. If not, the user is redirected to another path name of the top filter selected. The number of top filters displayed on the list is configurable from the extension's options page (See \autoref{fig:filtreOptionsPage}). The user also has the possibility to go through their URL history.
+When a user clicks on one of the top filters within the list, the URL of the active tab is modified to the corresponding hostname, path and query parameter of the chosen top filter. As long as the top filters share the same path name, they can be combined. If not, the user is redirected to another path name of the top filter selected. The number of top filters displayed on the list is configurable from the extension's options page (See \autoref{fig:filtreOptionsPage}). The user also has the possibility to go through their URL history.
 
-Clicking on one of the top-level paths below the top filters section navigates user to a more refined page inside the extension. \autoref{fig:filtreParameters} displays a list of saved URL subpaths and parameters. The user can see the number of times each parameter is called on the right side of the box, as well as when the parameter was last called below the parameter value, on this page. Reloading the page updates the \texttt{lastUpdatedAt} key and the parameter count
+Clicking on one of the top-level paths below the top filters section navigates the user to a more refined page inside the extension. \autoref{fig:filtreParameters} displays a list of saved URL subpaths and parameters. The user can see the number of times each parameter is called on the right side of the box, as well as when the parameter was last called below the parameter value, on this page. Reloading the page updates the \texttt{lastUpdatedAt} key and the parameter count
 
 Another thing to note is the input field and the "Navigate" button at the bottom of the page. The value in the input field is updated whenever the user navigates through the extension's "directory path" and selects the parameters. By clicking the "Navigate" button, the user can then navigate to the updated URL in a new tab.
 
@@ -51,7 +51,7 @@ The options page of the extension can be accessed by the user through the settin
   \label{fig:filtreOptionsPage}
 \end{figure}
 
-With the help of \emph{Storage Area Explorer}\footnote{\emph{Storage Area Explorer} is a an easy-to-use editor for Chrome Packaged Apps \& Extensions' Storage Area. GitHub repository: \url{https://github.com/jusio/storage-area-explorer}}, it is possible edit or view the \texttt{chrome.storage} using a user interface without the need for console logging the \texttt{chrome.storage} object in the code (See \autoref{fig:storageAreaExplorer}). The current size and size limit are also displayed within the Storage Explorer.
+With the help of \emph{Storage Area Explorer}\footnote{\emph{Storage Area Explorer} is an easy-to-use editor for Chrome Packaged Apps \& Extensions' Storage Area. GitHub repository: \url{https://github.com/jusio/storage-area-explorer}}, it is possible edit or view the \texttt{chrome.storage} using a user interface without the need for console logging the \texttt{chrome.storage} object in the code (See \autoref{fig:storageAreaExplorer}). The current size and size limit are also displayed within the Storage Explorer.
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{assets/screenschot_storage_area_explorer.png}

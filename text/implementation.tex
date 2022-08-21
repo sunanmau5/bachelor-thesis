@@ -73,7 +73,7 @@ This section walks through the project's file structure, as shown in \autoref{di
 \end{figure}
 
 \section{Installation}
-When a Chrome extension is installed, a manifest file is read, which acts as a contract between the extension and the browser. In addition to trivial data such as the extension's name, description and version, the runtime permissions are defined (\texttt{permissions}). Furthermore, the functions that are to be triggered after events occur are registered with the help of so-called service workers (\texttt{background}). Furthermore, an options page or configuration page (\verb;options_page;) can be defined. The version of the manifest file is determined by \verb;manifest_version;, which is currently the most recent and recommended version. The field \texttt{action} allows the user to customize the appearance and behaviour of the buttons that appear on the Chrome toolbar. In this case when the button with the icon \texttt{icons/icon-filtre-16.png} is clicked Chrome will load the \texttt{popup.html} file. The \verb;content_scripts; field in the manifest is used to register scripts that are statically declared and contains the following variables:
+When a Chrome extension is installed, a manifest file is read, which acts as a contract between the extension and the browser. In addition to trivial data such as the extension's name, description and version, the runtime permissions are defined (\texttt{permissions}). Furthermore, the functions that are to be triggered after events occur are registered with the help of so-called service workers (\texttt{background}). Furthermore, an options page or configuration page (\verb;options_page;) can be defined. The version of the manifest file is determined by \verb;manifest_version;, which is currently the most recent and recommended version. The field \texttt{action} allows the user to customize the appearance and behavior of the buttons that appear on the Chrome toolbar. In this case when the button with the icon \texttt{icons/icon-filtre-16.png} is clicked Chrome will load the \texttt{popup.html} file. The \verb;content_scripts; field in the manifest is used to register scripts that are statically declared and contains the following variables:
 
 \begin{itemize}
   \item \texttt{matches}: Specifies which pages will receive the script injection. The special pattern that is used \verb;<all_urls>; matches any URL that starts with a permitted scheme\footnote{\texttt{http}, \texttt{https}, \texttt{urn}, \texttt{file}, or \texttt{ftp}, and that can contain "*" characters are all permitted schemes of a URL}.
@@ -204,9 +204,9 @@ export type ITopFilters = ITopFilter[]
 \end{lstlisting}
 
 \subsection*{Filters in URLs}
-As mentioned in \autoref{url_anatomy}, a URL consists of various components, some of which are host name, path and query string. The topics, filters and facets, were also discussed in \autoref{filters_and_facets}. When adding persistent filters to a website, these definitions play a significant role.
+As mentioned in \autoref{url_anatomy}, a URL consists of various components, some of which are hostname, path and query string. The topics, filters and facets, were also discussed in \autoref{filters_and_facets}. When adding persistent filters to a website, these definitions play a significant role.
 
-Due to the hierarchical nature of a URL's path, traditional filters are typically positioned there. Facets typically utilize the query portion of a URL, as they are not hierarchical. Hierarchical classification refers to the process of classifying objects using a single hierarchical taxonomy. Faceted classification may employ hierarchy in one or more of its facets, but also permits the use of multiple taxonomies to classify objects. As seen in the preceding examples, the "multiple taxonomies" provided by facets are unsuitable for inclusion in the URL's path segment. Returning to the use of non-standard URL encoding, as stated in \autoref{url_anatomy} of the Path definition:
+Due to the hierarchical nature of a URL's path, traditional filters are typically positioned there. Facets typically utilize the query portion of a URL, as they are not hierarchical. Hierarchical classification refers to the process of classifying objects using a single hierarchical taxonomy. Faceted classification may employ hierarchy in one or more of its facets, but also permits the use of multiple taxonomies to classify objects. As seen in the preceding examples, the multiple taxonomies provided by facets are unsuitable for inclusion in the URL's path segment. Returning to the use of non-standard URL encoding, as stated in \autoref{url_anatomy} of the Path definition:
 
 \begin{displayquote}
   The path component contains data, usually organized in hierarchical form, that, along with data in the non-hierarchical query component, serves to identify a resource ...
@@ -234,7 +234,7 @@ In practice, however, not all websites adhere to these guidelines. A good compar
   \label{fig:lacosteMensBlackSneakersUrl}
 \end{figure}
 
-The solution to this issue would be to store both the query parameters and the path component of the URL. These properties ought to be accessible through the same host name. However, this solution raises an additional problem: how to transform the URL so that it can be stored as JSON.
+The solution to this issue would be to store both the query parameters and the path component of the URL. These properties ought to be accessible through the same hostname. However, this solution raises an additional problem: how to transform the URL so that it can be stored as JSON.
 
 \subsection*{Converting URL to JSON Object}
 The URL must be saved as a JSON object in order to count the number of times each query parameter is entered for each host. Here is an example of storing a simple URL with a single path and a query parameter:
@@ -374,7 +374,7 @@ Due to the scalability of the data structure depicted in \autoref{lst:recordLong
 ...
 \end{lstlisting}
 
-\begin{lstlisting}[style=ES6, caption={Resursive pathname to JSON function (TypeScript)}, label={lst:recursiveUpsertFunc}]
+\begin{lstlisting}[style=ES6, caption={Recursive pathname to JSON function (TypeScript)}, label={lst:recursiveUpsertFunc}]
 const recursiveUpsertFunc = (
   filters: PathType[],
   paths: string[],
@@ -424,9 +424,9 @@ const recursiveUpsertFunc = (
 \subsection*{Retrieving the Top Filters}
 While converting the URL into a JSON object is a formidable task, obtaining the top most used filters is more challenging. It is necessary to use yet another recursive helper function because it is unclear how deeply the JSON object is nested. This task cannot be resolved by using a regular loop function. Before starting to write the function, as depicted in \autoref{lst:recursiveTopFiltersFunc}, the procedures needed to solve the issue are defined.
 
-An array must first be initialized, and it will contain the top most used parameters. The options page of the extension allows user to change the length of this array. The second step entails iterating through each of the root paths that are accessible. Third, the parameters array for each path must be looped through and then the number of times each parameter is entered needs to be compared against existing values inside the top parameters array. The process is then repeated until every subpaths and parameters array is iterated.
+An array must first be initialized, and it will contain the top most used parameters. The options page of the extension allows users to change the length of this array. The second step entails iterating through each of the root paths that are accessible. Third, the parameters array for each path must be looped through and then the number of times each parameter is entered needs to be compared against existing values inside the top parameters array. The process is then repeated until every subpaths and parameters array is iterated.
 
-\begin{lstlisting}[style=ES6, caption={Recursive function to get the top filters (TypeScript)}, label={lst:recursiveTopFiltersFunc}]
+\begin{lstlisting}[style=ES6, caption={Recursive function to fetch the top filters (TypeScript)}, label={lst:recursiveTopFiltersFunc}]
 const recursiveTopFilterFunc = (
   topFilters: ITopFilters,
   paths: IPaths,
