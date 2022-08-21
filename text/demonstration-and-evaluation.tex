@@ -6,7 +6,7 @@ After the system's features have been implemented, the system can be demonstrate
 Due to the fact that the extension was originally created for Marta's website, it will be used as an example in the demonstration. The following procedure is illustrated in this chapter as a result of this thesis:
 
 \begin{enumerate}
-  \item With the extension installed, visit any web page with URL path or query
+  \item With the extension installed, visit any web page with a URL path or query
   \item Store the URL path and query in a JSON format
   \item See the available top filters for the specified hostname
   \item View the number of times URL parameters have been entered by opening the extension's pop-up.
@@ -21,7 +21,7 @@ The \texttt{dist} directory is loaded manually to \verb;chrome://extensions; bec
   \label{fig:filtreNoEntries}
 \end{figure}
 
-Families can find suitable caregivers through the Marta webapp at \url{app.marta.de/caregivers}. The page limits search results to 30 caregivers. In addition to the restriction, therefore, a filter based on URL query is implemented, allowing families to filter more caregivers. A modal dialog\footnote{\emph{Modal dialog} is a dialog that appears on top of the primary content and initiates a special mode that requires user interaction. More information on \url{https://www.nngroup.com/articles/modal-nonmodal-dialog/}} is displayed for filter configuration. After modifying the filter settings, the URL becomes \url{app.marta.de/caregivers?caregiver.germanVerbalProficiency=one}. This URL is now stored in the extension's \texttt{chrome.storage}. \autoref{fig:filtreKnownPaths} is a listing of the most frequently entered query parameters after configuring the filter settings multiple times, as well as the top-level paths stored from the website's hostname at the bottom of the page. Since the user has only visited the \texttt{/caregivers} page, only one item is displayed under the Paths section.
+Families can find suitable caregivers through the Marta web app at \url{app.marta.de/caregivers}. The page limits search results to 30 caregivers. In addition to the restriction, therefore, a filter based on URL query is implemented, allowing families to filter more caregivers. A modal dialog\footnote{\emph{Modal dialog} is a dialog that appears on top of the primary content and initiates a special mode that requires user interaction. More information on \url{https://www.nngroup.com/articles/modal-nonmodal-dialog/}} is displayed for filter configuration. After modifying the filter settings, the URL becomes \url{app.marta.de/caregivers?caregiver.germanVerbalProficiency=one}. This URL is now stored in the extension's \texttt{chrome.storage}. \autoref{fig:filtreKnownPaths} is a listing of the most frequently entered query parameters after configuring the filter settings multiple times, as well as the top-level paths stored from the website's hostname at the bottom of the page. Since the user has only visited the \texttt{/caregivers} page, only one item is displayed under the Paths section.
 
 \begin{figure}[H]
   \centering
@@ -30,7 +30,7 @@ Families can find suitable caregivers through the Marta webapp at \url{app.marta
   \label{fig:filtreKnownPaths}
 \end{figure}
 
-When a user clicks on one of the top filters within the list, the URL of the active tab is modified to the corresponding hostname, path and query parameter of the chosen top filter. As long as the top filters share the same path name, they can be combined. If not, the user is redirected to another path name of the top filter selected. The number of top filters displayed on the list is configurable from the extension's options page (See \autoref{fig:filtreOptionsPage}). The user also has the possibility to go through their URL history.
+When a user clicks on one of the top filters within the list, the URL of the active tab is modified to the corresponding hostname, path, and query parameter of the chosen top filter. As long as the top filters share the same path name, they can be combined. If not, the user is redirected to another path name of the top filter selected. The number of top filters displayed on the list is configurable from the extension's options page (See \autoref{fig:filtreOptionsPage}). The user also has the possibility to go through their URL history.
 
 Clicking on one of the top-level paths below the top filters section navigates the user to a more refined page inside the extension. \autoref{fig:filtreParameters} displays a list of saved URL subpaths and parameters. The user can see the number of times each parameter is called on the right side of the box, as well as when the parameter was last called below the parameter value, on this page. Reloading the page updates the \texttt{lastUpdatedAt} key and the parameter count
 
@@ -43,7 +43,7 @@ Another thing to note is the input field and the "Navigate" button at the bottom
   \label{fig:filtreParameters}
 \end{figure}
 
-The options page of the extension can be accessed by the user through the settings icon on the upper right corner. Excluded parameters can be defined on the options page, according to the functional requirements of the extension mentioned in \autoref{functional_requirements}. Every string in the "Exclude Parameters" field is not displayed anywhere in the extension, including the top filters and the query parameters section. Furthermore, the user can specify how many top filters are displayed in the extension pop-up. The value is set to 3 by default.
+The options page of the extension can be accessed by the user through the settings icon in the upper right corner. Excluded parameters can be defined on the options page, according to the functional requirements of the extension mentioned in \autoref{functional_requirements}. Every string in the "Exclude Parameters" field is not displayed anywhere in the extension, including the top filters and the query parameters section. Furthermore, the user can specify how many top filters are displayed in the extension pop-up. The value is set to 3 by default.
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{assets/screenshot_filtre_options_page.png}
@@ -51,7 +51,7 @@ The options page of the extension can be accessed by the user through the settin
   \label{fig:filtreOptionsPage}
 \end{figure}
 
-With the help of \emph{Storage Area Explorer}\footnote{\emph{Storage Area Explorer} is an easy-to-use editor for Chrome Packaged Apps \& Extensions' Storage Area. GitHub repository: \url{https://github.com/jusio/storage-area-explorer}}, it is possible edit or view the \texttt{chrome.storage} using a user interface without the need for console logging the \texttt{chrome.storage} object in the code (See \autoref{fig:storageAreaExplorer}). The current size and size limit are also displayed within the Storage Explorer.
+With the help of the browser extension Storage Area Explorer\footnote{\emph{Storage Area Explorer} is an easy-to-use editor for Chrome Packaged Apps \& Extensions' Storage Area. GitHub repository: \url{https://github.com/jusio/storage-area-explorer}}, it is possible to edit or view the \texttt{chrome.storage} using a user interface without the need for console logging the \texttt{chrome.storage} object in the code (See \autoref{fig:storageAreaExplorer}). The current size and size limit are also displayed within the Storage Explorer.
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{assets/screenschot_storage_area_explorer.png}
